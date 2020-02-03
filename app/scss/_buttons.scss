@@ -1,0 +1,785 @@
+
+.link_s {
+	position: relative;
+	display: inline-flex;
+
+	height: 75px;
+	width: 300px;
+	margin:10px 0;
+
+	font-size: 24px;
+	color:#000;
+	text-decoration: none;
+
+	transition:.5s;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.link_s span {
+	position: relative;
+	z-index: 1;
+}
+
+.link_s:hover {
+	color:#fff;
+}
+
+.link_s:before {
+	content: '';
+
+	position: absolute;
+	top:0;
+	left:0;
+
+	height: 100%;
+	width: 0;
+
+	background-image: url(/img/btn-bg2.png);
+	background-size: cover;
+
+	transition:.5s;
+	transform-origin:left;
+}
+
+.link_s:hover:before {
+	width: 100%;
+}
+
+.link_moveborder {
+	position: relative;
+	display: inline-block;
+
+	margin-top: 30px;
+	padding: 15px 30px;
+
+	font-size: 20px;
+	font-weight: 600;
+	color:#111;
+	text-decoration: none;
+	text-transform: uppercase;
+	border:2px solid #111;
+}
+
+.link_moveborder:before {
+	content: '';
+
+	position: absolute;
+	top:6px;
+	left:-2px;
+
+	height: calc(100% - 12px);
+	width: calc(100% + 4px);
+
+	background: #fff;
+
+	transition:.5s ease-in-out;
+	transition-delay:.5s;
+	transform: scaleY(1);
+}
+
+.link_moveborder:hover:before {
+	transform: scaleY(0);
+}
+
+.link_moveborder span {
+	position: relative;
+	z-index: 3;
+
+	color:#111;
+}
+
+.link_moveborder:after {
+	content: '';
+
+	position: absolute;
+	top:-2px;
+	left:6px;
+
+	height: calc(100% + 4px);
+	width: calc(100% - 12px);
+
+	background: #fff;
+
+	transition:.5s ease-in-out;
+	transform: scaleX(1);
+}
+
+.link_moveborder:hover:after {
+	transform: scaleX(0);
+}
+
+.block_with_an {
+ background-color: #f0f0f0;
+}
+
+
+// https://nisnom.com/kollektsiya-krasivyh-effektov-pri-navedenii-dlya-ssylok/
+
+
+
+
+.lefttoright a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  position: relative;
+  transition: all 0.6s;
+}
+.lefttoright a:before {
+  content: "";
+  width: 0;
+  height: 0.1em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #00aeff;
+  transition: all 0.3s;
+}
+.lefttoright a:hover:before {
+  width: 100%;
+  left: 0;
+  background: #ff5100;
+}
+
+
+
+
+
+.righttoleft a {
+  text-decoration: none;
+  font-size: 3rem;
+  position: relative;
+  transition: all 0.6s;
+}
+.righttoleft a:before {
+  content: "";
+  width: 0;
+  height: 0.1em;
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  background: #00aeff;
+  transition: all 0.3s;
+}
+.righttoleft a:hover:before {
+  width: 100%;
+  left: 0;
+  background: #ff5100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.middleosset a {
+  text-decoration: none;
+  font-size: 4rem;
+  position: relative;
+  transition: all 0.6s;
+}
+.middleosset a:before {
+  content: "";
+  width: 0;
+  height: 0.1em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: #00aeff;
+  transition: all 0.3s;
+}
+.middleosset a:hover:before {
+  width: 100%;
+  left: 0;
+  background: #ff5100;
+}
+
+
+
+
+
+
+
+.pass a {
+  text-decoration: none;
+  font-size: 3rem;
+  position: relative;
+  transition: all 0.6s;
+}
+.pass a:before {
+  content: "";
+  width: 0;
+  height: 0.1em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #00aeff;
+  transition: all 0.3s;
+}
+.pass a:hover:before {
+  width: 100%;
+  left: 0;
+  background: #ff5100;
+}
+
+
+
+
+
+
+
+
+
+.middle a {
+  text-decoration: none;
+  font-size: 1em;
+  position: relative;
+  transition: all 0.6s;
+}
+.middle a:before {
+  content: "";
+  width: 0;
+  height: 0.1em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: #00aeff;
+  transition: all 0.3s;
+}
+.middle a:hover:before {
+  width: 100%;
+  left: 0;
+  background: #ff5100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Glowing Effects on Buttons using HTML & CSS
+.glowing_button_b button{
+  position: relative;
+  height: 60px;
+  width: 200px;
+  border: none;
+  outline: none;
+  color: white;
+  background: #111;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+text-transform: uppercase;
+
+}
+.glowing_button_b button:after{
+  position: absolute;
+  content: '';
+  top: -5px;
+  left: -5px;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+  border-radius: 5px;
+  z-index: -1;
+  opacity: 1;
+  // filter: blur(5px);
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background-size: 400%;
+  transition: opacity .3s ease-in-out;
+  animation: animate 20s linear infinite;
+}
+.glowing_button_b button:hover:after{
+  opacity: 1;
+}
+.glowing_button_b button:hover:active{
+  // background: none;
+}
+.glowing_button_b button:hover:active:after{
+  // filter: blur(2px);
+}
+@keyframes animate {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+.glowing_button_b {
+margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$spotOne: #26115a;
+$spotTwo: #ec008c;
+$spotThree: #ff0000;
+
+
+
+.glowButton {
+	margin-top: 40px;
+	display: inline-block;
+  position: relative;
+  margin: 40px auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  line-height: 3rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient( 160deg, $spotThree, $spotTwo );
+  border-radius: 30px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow:  0 0 0 0 $spotTwo, 0.2rem 0.2rem 10px mix(black, $spotOne, 50%);
+  transition: box-shadow 0.6s;
+
+  &:hover {
+    box-shadow:0 0 10px 2px $spotTwo,
+      0.5rem 0.5rem 20px mix(black, $spotOne, 50%);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    border-radius: 30px;
+    background-image: linear-gradient( 170deg, rgba(white, 0.3), rgba(white, 0) );
+    pointer-events: none;
+  }
+}
+
+
+
+
+
+
+
+
+// progress bar appearance
+.progress-bar {
+  height: 3px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+      overflow: hidden;
+  background-color: #55708d;
+}
+.progress-bar .progress {
+  position: relative;
+  height: 100%;
+  background-color: #cfd6dd;
+  transition: width 0.5s ease-out;
+  border-radius: 0px 2px 2px 0px;
+}
+.progress-bar .glow {
+  width: 60px;
+  max-width: 100%;
+  height: 100%;
+  float: right;
+}
+.progress-bar .glow::before,
+.progress-bar .glow::after {
+  content: '';
+  display: block;
+  position: relative;
+  border-radius: 0px 2px 2px 0px;
+}
+.progress-bar .glow::before {
+  background: transparent;
+  height: 100%;
+  box-shadow: 0px 0px 10px #cfd6dd, 0px 0px 10px #04bfff;
+  z-index: -5;
+}
+.progress-bar .glow::after {
+  background: linear-gradient(to right, #3d5980 0%, transparent 100%);
+  height: calc(100% + 10px + 10px);
+  width: calc(100% + 10px);
+  top: -10px;
+  left: -10px;
+  z-index: -3;
+}
+
+.label {
+  font-family: Poppins;
+  color: #000;
+    text-shadow: 0px 0px 2px #cfd6dd;
+  font-size: 24px;
+}
+
+.fill-1 {
+  animation: fill-1 0.5s ease-out 0s;
+  animation-fill-mode: forwards;
+  width: 0%;
+}
+
+.fill-2 {
+  animation: fill-2 0.5s ease-out 0.5s;
+  animation-fill-mode: forwards;
+  width: 0%;
+}
+
+.fill-3 {
+  animation: fill-3 0.5s ease-out 1s;
+  animation-fill-mode: forwards;
+  width: 0%;
+}
+
+@keyframes fill-1 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes fill-2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@keyframes fill-3 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+.label.one {
+  animation: label 0.5s ease-out 0s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.label.two {
+  animation: label 0.5s ease-out 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.label.three {
+  animation: label 0.5s ease-out 1.0s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes label {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+.icon_hover ul {
+	padding: 20px;
+	display: flex;
+list-style: none;
+background-color: #18191f;
+
+}
+.icon_hover ul li {
+	padding: 20px;
+	margin:5px;
+
+}
+
+.icon_hover ul li a {
+	display: inline-block;
+	width: 50px;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 1.2rem;
+	color:gray;
+	background-color: #18191f;
+	box-shadow: -2px -2px 3px rgba(255, 255, 255, 0.05),
+	3px 3px 3px rgba(0, 0, 0, 0.20);
+}
+.icon_hover ul li a .fa {
+color:#555;
+
+}
+.icon_hover ul li a:hover .fa {
+color:#00f3ff;
+text-shadow: 0 0 15px #00f3ff;
+}
+
+.image__block {
+	height:100vh;
+	overflow:hidden;
+	width: 100%;
+	position: relative;
+}
+.img__BX {
+width: 600px;
+height:340px;
+position: absolute;
+transform:translate(-50%, -50%);
+}
+.img__BX img {
+position: absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+width: 100%;
+height:100%;
+object-fit:cover;
+}
+
+
+.img__BXP {
+width: 600px;
+height:340px;
+position: absolute;
+transform:translate(50%, 50%);
+}
+.img__BXP img {
+position: absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+width: 100%;
+height:100%;
+object-fit:cover;
+}
+.container__zero {
+	border:1px solid red;
+	position: relative;
+	padding: 20px 30px;
+}
+
+.contanter_numeric {
+		position: relative;
+	width: 80px;
+	height:50px;
+	border-radius:40px;
+	border:2px solid rgba(55, 55, 255, 0.10);
+
+}
+.contanter_numeric:hover {
+width: 120px;
+	border:2px solid rgba(55, 55, 255, 0.10);
+}
+.contanter_numeric .next {
+position: absolute;
+top:50%;
+right:30px;
+display: block;
+width: 12px;
+height:12px;
+border-left:2px solid #000;
+border-top:2px solid #000;
+z-index:1;
+transform:translateY(-50%) rotate(135deg);
+cursor: pointer;
+opacity:0;
+transition:.5s;
+}
+.contanter_numeric:hover .next {
+opacity:1;
+right:20px;
+}
+
+.contanter_numeric .prev {
+position: absolute;
+top:50%;
+left:30px;
+display: block;
+width: 12px;
+height:12px;
+border-left:2px solid #000;
+border-top:2px solid #000;
+z-index:1;
+transform:translateY(-50%) rotate(315deg);
+cursor: pointer;
+opacity:0;
+transition:.5s;
+}
+.contanter_numeric:hover .prev {
+opacity:1;
+left:20px;
+}
+#box span {
+position: absolute;
+display: block;
+width: 100%;
+height:100%;
+text-align: center;
+line-height: 46px;
+color:#00deff;
+user-select:none;
+display: none;
+font-size: 24px;
+font-weight: 700;
+}
+
+
+
+
+
+.parallax__text {
+position: relative;
+width: 100%;
+height:100vh;
+overflow:hidden;
+}
+
+.parallax__text .textBox {
+position: absolute;
+top:0;
+left:0;
+width: 100%;
+height:100vh;
+overflow:hidden;
+background-color:#189 ;
+
+clip-path:polygon(0 0, 55% 0, 45% 100%, 0 100%);
+}
+
+.parallax__text .textBox h2 {
+position: absolute;
+top:calc(50% - 150px);
+width: 100%;
+text-align: center;
+font-size: 12rem;
+color:#fff;
+
+}
+.parallax__text h2 {
+position: absolute;
+top:calc(50% - 150px);
+width: 100%;
+text-align: center;
+font-size: 12rem;
+color:#189 ;
+
+}
+
+
+
+
+
+
+.hover__text {
+	margin-top: 30px;
+width: 100%;
+height:100vh;
+overflow:hidden;
+background-color:#189 ;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.hover__text  ul{
+list-style: none;
+}
+
+.hover__text  ul li a{
+position: relative;
+text-decoration: none;
+text-transform: uppercase;
+color:transparent;
+font-weight: 900;
+letter-spacing: 2px;
+font-size: 3rem;
+padding: 0 10px;
+line-height: 1.82rem;
+}
+.hover__text  ul li a:before{
+content:attr(data-text);
+position: absolute;
+top:0;
+left:0;
+width: 100%;
+height:100%;
+padding: 0 10px;
+-webkit-text-stroke: 1px #eee ;
+transform:translateX(0);
+transition:.5s;
+opacity:1;
+pointer-events:none;
+}
+
+.hover__text  ul li a:hover:before{
+transform:translateX(100%);
+opacity:0;
+}
+
+.hover__text  ul li a:after{
+content:attr(data-text);
+position: absolute;
+top:0;
+left:0;
+width: 100%;
+height:100%;
+color:#03f4f2;
+padding: 0 10px;
+-webkit-text-stroke: 1px #eee ;
+transform:translateX(-100%);
+transition:.5s;
+opacity:0;
+pointer-events:none;
+}
+
+.hover__text  ul li a:hover:after{
+transform:translateX(0);
+opacity:1;
+}
+

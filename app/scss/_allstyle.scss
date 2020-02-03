@@ -1,0 +1,854 @@
+
+
+// Как оформить input оригинальным способом
+.wrapper_form_box {
+	display: flex;
+
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.wrapper_form {
+	width: 50%;
+	color:#fff;
+}
+
+.block-form__title {
+	margin-bottom: 20px;
+
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.wrapper_form {
+}
+
+.block-form__input {
+	margin-bottom: 15px;
+}
+
+.checkbox{
+	position: relative;
+
+	padding: 0 0 0 70px;
+
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+
+	transition:all .3s ease 0s;
+}
+
+.checkbox:before{
+	content:'';
+
+	position: absolute;
+	top:0;
+	left:0;
+
+	height: 20px;
+	width: 50px;
+
+	border-radius: 20px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.checkbox:after{
+	content:'';
+
+	position: absolute;
+	top:-5px;
+	left:0;
+
+	height: 30px;
+	width: 30px;
+
+	background-color: #bfc0c4;
+	border-radius: 50%;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.checkbox.active{
+	color:#000;
+	color:#fff;
+}
+
+.checkbox.active:before{
+// background-color: #4fbb65;
+}
+
+.checkbox.active:after{
+	left:25px;
+	background-color: #4fbb65;
+}
+
+.checkbox input{
+	display: none;
+}
+
+.radiobuttons__item {
+	position: relative;
+
+	margin-bottom: 20px;
+	padding: 0 0 0 50px;
+
+	font-size: 16px;
+	color:#b2b2b2;
+
+	transition:all .3s ease 0s;
+}
+
+.radiobuttons__item:before{
+	content:'';
+
+	position: absolute;
+	top:0;
+	left:0;
+
+	height: 30px;
+	width: 30px;
+
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.radiobuttons__item:after{
+	content:'';
+
+	position: absolute;
+	top:5px;
+	left:5px;
+
+	height: 20px;
+	width: 20px;
+
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+
+	transition:all .3s ease 0s;
+// background-color: #b2b2b2;
+	transform:scale(0);
+}
+
+.radiobuttons__item.active{
+	color:#000;
+}
+
+.radiobuttons__item.active:after{
+	background-color: #4fbb65;
+	transform:scale(1);
+}
+
+.button_one {
+	position: relative;
+	display: inline-block;
+
+	padding: 0 30px 0 30px;
+
+	cursor: pointer;
+	background-color:#bfc0c4;
+	font-size: 30px;
+	letter-spacing: 8px;
+	line-height: 60px;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 30px;
+
+	transition: all .3s ease 0s;
+}
+
+.button_one:before {
+	content:'';
+
+	position: absolute;
+	top:0;
+	left:0;
+
+	height: 100%;
+	width: 100%;
+
+	background-color: #4fbb65;
+	border-radius: 30px;
+
+	transition: all .3s ease 0s;
+	transform:scale(0);
+}
+
+.button_one span  {
+	position: relative;
+	z-index: 2;
+}
+
+.button_one:hover:before {
+	transform:scale(1);
+}
+
+// Enroll My Course : Next Level CSS Animation and Hover Effects
+.scrolling_block {
+	position: relative;
+
+	overflow: hidden;
+	height: 780px;
+
+	background: url(/img/fon-bloc1.jpg), linear-gradient(230deg, #f533d4, #2461bb);
+	background-size: cover;
+
+	background-blend-mode: multiply;
+}
+
+// background-blend-mode
+// normal
+// overlay
+// soft-light
+// hard-light
+// darken
+// multiply
+// color-burn
+// lighten
+// screen
+// color-dodge
+// difference
+// exclusion
+// hue
+// saturation
+// color
+// luminosity
+.skewed {
+	position: absolute;
+	right:0;
+	bottom: 100%;
+
+	height: 100%;
+	width: 100%;
+
+	background-color:red;
+
+	transform:skewY(-14deg);
+	transform-origin:top left;
+}
+
+.transparent_text {
+	display: flex;
+
+	min-height: 100vh;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.transparent_text .content_text {
+	text-align: center;
+}
+
+.transparent_text .content_text h2 {
+	background-attachment: fixed;
+	background-image: url(/img/s1200.webp);
+	font-size: 10vw;
+	font-weight: 900;
+	line-height: 1em;
+	text-transform: uppercase;
+
+// background-clip: text;
+// text-fill-color:transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color:transparent;
+}
+
+.transparent_text .content_text p {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.transparent_text .content_text a  {
+	display: inline-block;
+
+	margin-top: 20px;
+	padding: 10px 20px;
+
+	color:#000;
+	text-decoration: none;
+	border:2px solid #000;
+}
+
+// свюю
+.cba_box {
+	background:#000;
+}
+
+.cont_boxing_anim {
+	position: relative;
+	display: flex;
+
+	margin:40px 0;
+
+	background:#000;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.cont_boxing_anim_items {
+	position: relative;
+	display: flex;
+
+	height: 400px;
+	width: 300px;
+
+	color:#fff;
+
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	-webkit-box-reflect:below 15px linear-gradient(transparent, transparent, rgba(0,0,0,.2));
+}
+
+.cont_boxing_anim_items .content {
+	position: relative;
+	z-index: 8;
+
+	padding: 0 20px;
+
+	color:#fff;
+}
+
+.cont_boxing_anim_items:hover .content {
+	color:#000;
+}
+
+.cont_boxing_anim_items h3 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.cont_boxing_anim_items:before {
+	content:'';
+
+	position: absolute;
+	top:-10px;
+	left:-10px;
+
+	height: 100%;
+	width: 100%;
+
+	background: #000;
+	border:4px solid #fff;
+
+	filter: url(#wavy);
+}
+
+.cont_boxing_anim_items:after {
+	content:'';
+
+	position: absolute;
+	top:-10px;
+	left:-10px;
+
+	height: 100%;
+	width: 50%;
+
+	background:rgba(255, 255, 255, .1);
+	border:4px solid #fff;
+	border-right: none;
+
+	filter: url(#wavy);
+}
+
+.cont_boxing_anim_items:hover {
+	color:#000;
+}
+
+.cont_boxing_anim_items:hover:before {
+	background: #fff;
+	transition:.5s;
+}
+
+.cont_boxing_anim_items:hover:after {
+	background:rgba(255, 253, 208, 1.00);
+	transition:.5s;
+}
+
+// https://www.youtube.com/watch?v=1e7dAyEDe3o
+body{
+	position: relative;
+}
+
+.fulpage {
+	position: relative;
+	min-height: 780px;
+}
+
+.fulpage_slider {
+	position: absolute;
+	display: flex;
+	top:0;
+	left:0;
+
+	height: 780px;
+	width: 100%;
+
+	border:2px solid red;
+	// position: relative;
+}
+
+.fulpage_slider .slide__fp {
+	position: relative;
+
+	overflow: hidden;
+	height: 100%;
+
+	background: #0f0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-right: 2px solid #000;
+
+	transition: .5s ease-in-out;
+
+	flex-grow: 1;
+}
+
+.fulpage_slider .slide__fp:hover {
+	flex-grow: 5;
+}
+
+.fulpage_slider .slide__fp:last-child {
+	border-right: none;
+}
+
+.fulpage_slider .slide__fp .content {
+	position: absolute;
+	bottom:0;
+	visibility:hidden;
+
+	margin:40px;
+	padding: 30px;
+
+	opacity: 0;
+	background-color: #000;
+	color:#fff;
+
+	transition:0s;
+	transform:tranlateY(100px);
+}
+
+.fulpage_slider .slide__fp:hover .content {
+	visibility:visible;
+
+	opacity: 1;
+
+	transition:.5s;
+	transition-delay:.5s;
+	transform:tranlateY(0);
+}
+
+.fulpage_slider .slide__fp:nth-child(1){
+	background-image: url(/img/tmb_12170_2582.jpg);
+	background-position: center center;
+}
+
+.fulpage_slider .slide__fp:nth-child(2){
+	background-image: url(/img/1357878-3-e1554275580126.jpg);
+	background-position: center center;
+}
+
+.fulpage_slider .slide__fp:nth-child(3){
+	background-image: url(/img/840f17696985cc48.jpg);
+	background-position: center center;
+}
+
+.fulpage_slider .slide__fp:nth-child(4){
+	background-image: url(/img/19684742.jpg);
+	background-position: center center;
+}
+
+.fulpage_slider .slide__fp:nth-child(5){
+	background-image: url(/img/755689193966217.jpeg);
+	background-position: center center;
+}
+
+.fulpage_slider .slide__fp:nth-child(6){
+	background-image: url(/img/8c511d7c.jpeg);
+	background-position: center center;
+}
+
+#container {
+	position: relative;
+
+	height: 100vh;
+
+	background: linear-gradient(45deg, #8500ff, #5acaff);
+}
+
+.contenting {
+	position: absolute;
+	display: flex;
+	top:10%;
+	right:10%;
+	bottom:10%;
+	left:10%;
+
+	background: url('/img/p404.png') #151729;
+	border-radius: 10px;
+	box-shadow: 0 15px 30px rgba(0,0,0, .5);
+
+	justify-content: center;
+	align-items: center;
+}
+
+.contenting_box {
+	max-width: 600px;
+	text-align: center;
+}
+
+.contenting_box h2 {
+	font-size: 10vw;
+	color:#fff;
+	line-height: 1em;
+}
+
+.contenting_box h4 {
+	font-size: 2vw;
+	color:#fff;
+	line-height: 1em;
+}
+
+.hi-slide {
+	position: relative;
+
+	height: 292px;
+	width: 754px;
+	margin:115px auto 0;
+
+	border-radius: 50px;
+}
+
+.hi-prev {
+	position: absolute;
+	top:50%;
+
+	width: 50px;
+	margin-top: -20px;
+
+	cursor: pointer;
+	background: #fff;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+	border-radius:50px ;
+
+	transition:all .7s;
+
+	height: 50px;color:#000;
+}
+
+.hi-next {
+	right:-59px;
+}
+
+.hi-prev {
+	left:-59px;
+}
+
+.hi-next:before {
+	content:'>';
+}
+
+.hi-prev:before {
+	content:'<';
+}
+
+.hi-prev:hover {
+	opacity: 1;
+	background-color: #fff;
+}
+
+.hi-slide > ul {
+	position: relative;
+
+	height: 292px;
+	width: 754px;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.hi-slide > ul > li {
+	position: absolute;
+	top:147px;
+	left:377px;
+	z-index: 0;
+
+	overflow: hidden;
+	height: 0;
+	width: 0;
+	margin:0;
+	padding: 0;
+
+	cursor: pointer;
+	background-color: #333;
+	border:3px solid #fff;
+}
+
+.hi-slide > ul > li > img {
+	height: 100%;
+	width: 100%;
+
+	background-position: center;
+}
+
+footer {
+	height: 100vh;
+	background-color: red;
+}
+
+//Крутая супер разворачивающаяся карточка
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://www.youtube.com/watch?v=palhcBzdXD4
+
+
+
+
+
+
+
+
+
+
+// https://www.youtube.com/watch?v=sbgyBFgzBSw&t=5s
+// https://www.youtube.com/watch?v=oKBNGaZP1dQ
+//https://www.youtube.com/watch?v=_C1ZJW7NuHw
+//https://www.youtube.com/watch?v=7BXK_W6IOfY
+
+
+// https://www.youtube.com/watch?v=zSYc0KYOKZk
+// https://www.youtube.com/watch?v=vmaGvEr9ri0
+// https://www.youtube.com/watch?v=jdS2P_a3Li4
+// https://www.youtube.com/watch?v=M-dxZwtnYMg
+// https://www.youtube.com/watch?v=QGR9NPz4J-g
+
+// https://www.youtube.com/watch?v=3yJzd22YVxs
+// https://www.youtube.com/watch?v=W-uyoWE2-eM&t=3s
+// https://www.youtube.com/watch?v=tJqvg0bsKBI&t=32s
+//https://www.youtube.com/watch?v=Y_5avQKvwIA&t=8s
+// https://www.youtube.com/watch?v=mNPn2NkbgqU
+
+// https://www.youtube.com/watch?v=cSWWhwvJ3S8
+// https://www.youtube.com/watch?v=AkK8yHC4TlI
+//https://www.youtube.com/watch?v=jFqm8tKA8vE
+
+
+
+
+//Animated Waves using SVG | CSS Javascript & TweenMax
+
+.header_wavy {
+position: absolute;
+width: 100%;
+height:100vh;
+background-color: #111;
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+display: -o-flex;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.header_wavy svg {
+position: absolute;
+top:0;
+left:0;
+}
+
+
+
+//clock_block
+
+
+.clock_block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.clock_block__items {
+width: 50%;
+}
+.countdoun {
+display: flex;
+margin-top: 50px;
+}
+.countdoun div {
+position: relative;
+width: 100px;
+height: 100px;
+line-height: 100px;
+text-align: center;
+background:#333;
+margin: 0 15px;
+font-size: 3rem;
+font-weight: 500;
+color:#fff;
+}
+.countdoun div:before {
+content:'';
+position: absolute;
+bottom:-30px;
+left:0;
+width: 100%;
+height:35px;
+background-color: #ff0;
+color:#333;
+font-size: .9800rem ;
+line-height: 35px;
+font-weight: 300;
+}
+.countdoun #day:before {
+content: 'Дней';
+}
+.countdoun #hour:before {
+content: 'Часов';
+}
+.countdoun #minute:before {
+content: 'Минут';
+}
+.countdoun #second:before {
+content: 'Секунд';
+}
+
+
+
+
+
+
+
+.card__wrap {
+	display: flex;
+	justify-content: space-between;
+}
+.card__wrap .card {
+margin-left:15px;
+margin-right: 15px;
+}
+.card__wrap .card .card-item .card-circle {
+	position: relative;
+}
+.card__wrap .card .card-item img {
+position: absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+	width: 146px;
+	height:146px;
+	z-index: 2;
+}
+.card-circle {
+	width: 146px;
+	height:146px;
+	border-radius: 100%;
+	box-shadow:0 1px 6px rgba(0,0,0,.1);
+	margin:0 auto;
+	overflow:hidden;
+}
+.card-text {
+	background-color: #fff;
+	border-radius:20px;
+		box-shadow:0 1px 6px rgba(0,0,0,.1);
+		margin-top: -58px;
+		z-index:1;
+		position: relative;
+		padding: 60px 20px 30px 20px;
+}
+
+.card-item {
+	position: relative;
+
+}
+
+.card-text h3 {
+margin-bottom: 20px;
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+	#mainbox{
+			font-size: 24px;
+			cursor: pointer;
+			transition: all .6s;
+		}
+		.sidemenu{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			width: 0px;
+			background-color: #222;
+			z-index: 1;
+			padding-top: 100px;
+			overflow-x: hidden;
+			transition: all .5s;
+		}
+		.sidemenu a{
+			padding: 8px 8px 8px 64px;
+			text-decoration: none;
+			font-size: 20px;
+			color: #999;
+			display: block;
+		}
+		.sidemenu a:hover{
+			color: white;
+		}
+		.sidemenu .closebtn{
+			position: absolute;
+			top: 0px;
+			right: 25px;
+			font-size: 36px;
+			margin-left: 32px;
+		}

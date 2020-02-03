@@ -1,0 +1,44 @@
+
+.header_fon {
+	min-height: 600px;
+	flex-wrap: wrap;
+	background: url('/img/programmer.jpg') center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.header_fon:before {
+	top:0;
+	left:0;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: red;
+	opacity: .7;
+}
+
+
+.header_content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.header_wrap {
+	display: flex;
+	align-items: center;
+	min-height: 600px;
+	position: relative;
+}
+.header_content h1 {
+	font-size: 40px;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.header_descr {
+	margin-top: 50px;
+	font-size: 24px;
+}
