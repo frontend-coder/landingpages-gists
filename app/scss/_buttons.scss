@@ -694,7 +694,7 @@ clip-path:polygon(0 0, 55% 0, 45% 100%, 0 100%);
 
 .parallax__text .textBox h2 {
 position: absolute;
-top:calc(50% - 150px);
+top:50%;
 width: 100%;
 text-align: center;
 font-size: 12rem;
@@ -703,7 +703,7 @@ color:#fff;
 }
 .parallax__text h2 {
 position: absolute;
-top:calc(50% - 150px);
+top:50%;
 width: 100%;
 text-align: center;
 font-size: 12rem;

@@ -388,6 +388,38 @@ body,
 
 <!--
 onclick="menuToggle()" -->
+
+<div class="fullpageMenu" id="fullpageMenuRules">
+<div class="banner">
+<!-- 	<img src="img/bg.jpg" alt=""> -->
+</div>
+<div class="nav">
+	<ul>
+		<li><a href="#" data-text="главная">главная</a></li>
+		<li><a href="#" data-text="о компании">о компании</a></li>
+		<li><a href="#" data-text="услуги">услуги</a></li>
+		<li><a href="#" data-text="портфолио">портфолио</a></li>
+		<li><a href="#" data-text="команда">команда</a></li>
+		<li><a href="#" data-text="отзывы">отзывы</a></li>
+		<li><a href="#" data-text="контакты">контакты</a></li>
+	</ul>
+</div>
+</div>
+
+<div class="menuicon" id="toggle__menu"></div>
+
+<script>
+// 	function fullpageMenuRulesMenu() {
+// 		var fullpageMenuRules = document.getElementById('fullpageMenuRules');
+// 		var toggleMenu = document.getElementById('toggle__menu');
+// 		fullpageMenuRules.classList.toggle('active');
+// 		toggleMenu.classList.toggle('active');
+// 	}
+// 	var fullpageMenuR = document.getElementById('fullpageMenuRules')
+// fullpageMenuR.onclick = fullpageMenuRulesMenu();
+</script>
+
+
 <div id="toggleIcon">
 <div class="hamburgerNew hamburger hamburger--arrowalt js-hamburger">
 	<div class="hamburger-box">
@@ -414,7 +446,8 @@ onclick="menuToggle()" -->
 
 </script> -->
 
-<header id="header" class="header_fon">
+<header id="header_parallax" class="header_fon">
+	<div id="header_fon_fon"> </div>
 	<div class="container">
 		<div class="row">
 			<nav class="menu menu_fixed" role='navigation'>
@@ -458,24 +491,80 @@ onclick="menuToggle()" -->
 </header>
 	<!-- /header -->
 
+<!-- <script>
+	var headerBg = document.getElementById('header_fon_fon');
+	window.addEventListener('scroll', function() {
+headerBg.style.opacity = 1 - +window.pageYOffset/550+''
+headerBg.style.top = +window.pageYOffset+'px'
+headerBg.style.backgroundPositionY = +window.pageYOffset/2+'px'
+	})
+
+</script> -->
+
 	<main>
 
 
 
+		<header class="cool_header">
+			<div class="content__header">
+				<div>
+					<h2>Далеко-далеко за.</h2>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Жизни страна океана ему сбить повстречался если грустный, продолжил города пустился мир. Всеми?</p>
+					<a href="#"> еще читать</a>
+				</div>
+			</div>
+
+			<div class="imgBx__coolsite">
+				<img src="img/footboll.png" alt="футболист">
+			</div>
+
+			<ul class="nav__header">
+				<li><a href="#">главная</a></li>
+				<li><a href="#" class="active">о нас</a></li>
+				<li><a href="#">творчество</a></li>
+				<li><a href="#">команда</a></li>
+				<li><a href="#">рейтинг</a></li>
+			</ul>
+
+			<ul class="sci">
+				<li><a href="#">facebook</a></li>
+				<li><a href="#">twitter</a></li>
+				<li><a href="#">instagram</a></li>
+			</ul>
+		</header>
 
 
 
 
+<section class="box-area_color ">
+<div class="box-area">
+<div class="single__boxing">
+	<div class="iconic">
+		<i class="fa fa-cog"></i>
+	</div>
+	<h2> web design</h2>
+	<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. </p>
+</div>
+
+<div class="single__boxing">
+	<div class="iconic">
+		<i class="fa fa-cog"></i>
+	</div>
+	<h2> web design</h2>
+	<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+</div>
+
+<div class="single__boxing">
+	<div class="iconic">
+		<i class="fa fa-cog"></i>
+	</div>
+	<h2> web design</h2>
+	<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.  </p>
+</div>
 
 
-
-
-
-
-
-
-
-
+</div>
+</section>
 
 
 
@@ -513,6 +602,26 @@ onclick="menuToggle()" -->
 				</div>
 			</div>
 		</div>
+
+
+
+<section class="monten__par">
+
+        <div id="main">
+            <div id="logo">
+
+Эти супер-пупер горы
+            	<!-- <img src="img/par/DAFTCREATION2.png"/> -->
+
+
+            </div>
+            <div id="mountainImg"><img src="img/par/Mountain.png" width="100%"/></div>
+        </div>
+
+        <div id="btn">
+            <img src="img/par/Playpng.png" width="20px"/>
+        </div>
+</section>
 
 		<section class="waavy_wather">
 			<div class="content">
@@ -571,12 +680,14 @@ document.querySelector('.contanter_numeric .prev').addEventListener("click", pre
 	<h2 class="layer"> Parallax</h2>
 </div>
 </section>
+
+
 <script>
 	document.addEventListener('mousemove', parallax);
 	function parallax(e) {
 		this.querySelectorAll('.layer').forEach(layer => {
-			let x = (window.innerWidth - e.pageX * 10) / 50;
-			let y = (window.innerHeight - e.pageY * 10) / 50;
+			let x = (window.innerWidth - e.pageX * 100) / 300;
+			let y = (window.innerHeight - e.pageY * 10) / 300;
 			layer.style.transform = `translate(${x}px,${y}px)`;
 		})
 	}
@@ -1354,7 +1465,32 @@ document.querySelector('.contanter_numeric .prev').addEventListener("click", pre
 	</div>
 </section>
 
-
+<div class="container cff">
+	<div class="box__it">
+		<div class="box">
+			<div class="chart" data-percent="73" data-scale-color="#ffb400">73%</div>
+			<h2>Html</h2>
+		</div>
+	</div>
+	<div class="box__it">
+		<div class="box">
+			<div class="chart" data-percent="90" data-scale-color="#ffb400">90%</div>
+			<h2>Css</h2>
+		</div>
+	</div>
+	<div class="box__it">
+		<div class="box">
+			<div class="chart" data-percent="85" data-scale-color="#ffb400">85%</div>
+			<h2>Javascript</h2>
+		</div>
+	</div>
+	<div class="box__it">
+		<div class="box">
+			<div class="chart" data-percent="95" data-scale-color="#ffb400">95%</div>
+			<h2>Photoshop</h2>
+		</div>
+	</div>
+</div>
 <!--
 		<section class="block scrolling_block">
 			<div class="skewed">
@@ -1524,6 +1660,36 @@ document.querySelector('.contanter_numeric .prev').addEventListener("click", pre
 			</div>
 
 		</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="block circule__bar">
+	<div class="container">
+		<h2> Animated Circular Progress Bar - Progress Js</h2>
+		<div class="row">
+			<div class="animated_circular_progress_bar">
+				<div class="animated_circular_progress_bar__iten">
+                    <div class="my-progress-bar"></div>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
 	</main><!-- /main -->
 
 
@@ -1539,6 +1705,20 @@ document.querySelector('.contanter_numeric .prev').addEventListener("click", pre
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js" integrity="sha256-cyEXrJKjO3YNkpCjPxVBdi7pRJ3EF+okm1oN9Qc4rRY=" crossorigin="anonymous"></script>
 
 	<script src="js/scripts.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js'></script>
+
+<script>
+  $('.chart').easyPieChart({
+    size: 100,
+    barColor: "#17d3e6",
+    scaleLength: 0,
+    lineWidth: 15,
+    trackColor: "#373737",
+    lineCap: "circle",
+    animate: 2000,
+  });
+
+</script>
 
 
 <script>
