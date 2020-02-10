@@ -83,12 +83,12 @@ ol {
   z-index: 2;
 }
 
-a {
+.sub-menu .menu-item a {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
 }
-a:focus {
+.sub-menu .menu-item a:focus {
   outline: none;
 }
 

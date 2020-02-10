@@ -23,174 +23,11 @@
 	</style>
 	<link rel="stylesheet" href="css/libs.min.css" />
 
- <style>
-     * {
-	 margin: 0;
-	 box-sizing: border-box;
-	 padding: 0;
-}
-html,
-body,
-.int_card {
-	 width: 100%;
-	 height: 100%;
-/* 	 overflow: hidden; */
-
-}
-.int_card {
-
- background:#009688;
-}
- .wrapper {
-	 width: 100%;
-	 height: 100%;
-	 -webkit-perspective: 2000px;
-	 padding: 5%;
-	 perspective: 2000px;
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-}
- .left, .middle, .right {
-	 float: left;
-	 position: relative;
-	 height: 100%;
-	 background-color: #fff;
-	 width: 33%;
-	 max-width: 300px;
-	 max-height: 400px;
-}
- .left, .right {
-	 transition: 0.7s ease-in-out;
-}
- .left.open, .right.open {
-	 transform: rotateY(0deg);
-	 transition: 0.7s ease-in-out;
-}
- .left {
-	 z-index: 20;
-	 transform: rotateY(180deg);
-	 transform-origin: 100% 50%;
-}
- .right {
-	 transform: rotateY(-180deg);
-	 transform-origin: 0% 50%;
-}
- .front, .back {
-	 height: 100%;
-	 width: 100%;
-	 position: absolute;
-	 background-color: #fff;
-	 top: 0;
-}
- .front {
-	 transform: rotateY(180deg);
-	 z-index: 5;
-}
- .back {
-	 background-color: #fff;
-	 z-index: 4;
-	 backface-visibility: hidden;
-	 -webkit-backface-visibility: hidden;
-}
- .back.open {
-	 z-index: 10;
-}
- .openB {
-	 background-color: #009688;
-	 border: 2px solid #009688;
-	 padding: 5px;
-     position: absolute;
-	 min-width: 120px;
-	 max-width: 150px;
-	 z-index: 50;
-	 bottom: 30px;
-	 font-weight: 300;
-	 font-size: 1em;
-	 transition: 0.2s ease-in-out;
-	 cursor: pointer;
-     border-radius: 50px;
-     color: white;
-}
- .openB:hover {
-	 background-color: #009688;
-	 color: white;
-	 transition: 0.2s ease-in-out;
-     outline: none;
-}
- .closeB {
-	 position: absolute;
-	 border: none;
-	 background-color: rgba(0, 0, 0, 0.4);
-	 color: white;
-	 z-index: 50;
-	 width: 30px;
-	 font-size: 1em;
-	 cursor: pointer;
-	 height: 30px;
-	 top: 10px;
-	 right: 10px;
-	 border-radius: 50%;
-	 display: none;
-}
- .closeB:hover {
-	 background-color: rgba(0, 0, 0, 0.2);
-	 transition: 0.2s ease-in-out;
-}
- .preview {
-	 max-height: 100px;
-	 overflow: hidden;
-	 text-overflow: ellipsis;
-	 content: "";
-	 position: relative;
-	 display: block;
-}
- .preview:before {
-	 content: '';
-	 width: 100%;
-	 height: 100%;
-	 position: absolute;
-	 left: 0;
-	 top: 0;
-	 background: linear-gradient(transparent, white);
-}
- .sectionWrap {
-	 height: 100%;
-	 width: 100%;
-	 padding: 40px;
-	 box-sizing: border-box;
-	 overflow: hidden;
-}
- h1 {
-	 font-family: 'Roboto Condensed', sans-serif;
-	 font-size: 2.1em;
-	 line-height: 1;
-	 color: #34495e;
-     font-weight: 300;
-}
- p {
-	 font-family: 'Roboto Condensed', sans-serif;
-	 font-size: 1.1em;
-	 max-height: 100px;
-	 text-overflow: clip;
-}
-
-/* .int_iten {
-	width: 33%;
-}
-.int_card {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	justify-content: space-between;
-} */
-
-    </style>
 </head>
 
 <body>
+
+
 <!-- <div id="mainbox">&#9776; Open</div>
 	<div id="menu888" class="sidemenu">
 		<a href="#">Home</a>
@@ -536,40 +373,92 @@ headerBg.style.backgroundPositionY = +window.pageYOffset/2+'px'
 
 
 
-<section class="box-area_color ">
-<div class="box-area">
-<div class="single__boxing">
-	<div class="iconic">
-		<i class="fa fa-cog"></i>
+		<section class="box-area_color ">
+			<div class="box-area">
+				<div class="single__boxing">
+					<div class="iconic">
+						<i class="fa fa-cog"></i>
+					</div>
+					<h2> web design</h2>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. </p>
+				</div>
+				<div class="single__boxing">
+					<div class="iconic">
+						<i class="fa fa-cog"></i>
+					</div>
+					<h2> web design</h2>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+				</div>
+				<div class="single__boxing">
+					<div class="iconic">
+						<i class="fa fa-cog"></i>
+					</div>
+					<h2> web design</h2>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.  </p>
+				</div>
+			</div>
+		</section>
+
+
+
+<section class="header__site">
+	<div class="site__logo">
+	 <a href="#">Крутой сайт</a>
 	</div>
-	<h2> web design</h2>
-	<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. </p>
-</div>
-
-<div class="single__boxing">
-	<div class="iconic">
-		<i class="fa fa-cog"></i>
+	<div class="site__nav">
+		<ul class="clearfix">
+			<li id="show-nails"> <a href="#">Главная</a> </li>
+			<li> <a href="#">О нас</a> </li>
+			<li> <a href="#">Галерея</a> </li>
+			<li> <a href="#">Контакты</a> </li>
+			<li> <a href="#">Отзывы</a> </li>
+			<li> <a href="#">Наши услуги</a> </li>
+			<li> <a href="#">Наша команда</a> </li>
+			<li> <a href="#">FAQ</a> </li>
+		</ul>
 	</div>
-	<h2> web design</h2>
-	<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
-</div>
-
-<div class="single__boxing">
-	<div class="iconic">
-		<i class="fa fa-cog"></i>
-	</div>
-	<h2> web design</h2>
-	<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.  </p>
-</div>
-
-
-</div>
 </section>
+<div class="slider__site">
+	<ul>
+		<li id="no-js-slider-1" class="slide">
+			<img src="img/slider/eeled-footwear-140145.jpg" alt="">
+			<a href="#no-js-slider-10" class="prev"></a>
+			<a href="#no-js-slider-2" class="next"></a>
+		</li>
+
+		<li id="no-js-slider-2" class="slide">
+			<img src="img/slider/Closeup_Legs_Stilettos_539060_5760x3840.jpg" alt="">
+			<a href="#no-js-slider-1" class="prev"></a>
+			<a href="#no-js-slider-3" class="next"></a>
+		</li>
+
+		<li id="no-js-slider-3" class="slide">
+			<img src="img/slider/9fd89a4a73105edf865f3235c2f95421ac4de0441154fe0f11b786e0fae6b986.jpg" alt="">
+			<a href="#no-js-slider-2" class="prev"></a>
+			<a href="#no-js-slider-4" class="next"></a>
+		</li>
+
+
+
+		<li id="no-js-slider-4" class="slide">
+			<img src="img/slider/8a9490f60261f9fec3a01e532af65b1d.jpg" alt="">
+			<a href="#no-js-slider-3" class="prev"></a>
+			<a href="#no-js-slider-5" class="next"></a>
+		</li>
+
+
+		<li id="no-js-slider-5" class="slide">
+			<img src="img/slider/eeled-footwear-140145.jpg" alt="">
+			<a href="#no-js-slider-4" class="prev"></a>
+			<a href="#no-js-slider-5" class="next"></a>
+		</li>
 
 
 
 
+	</ul>
 
+</div>
 
 		<div class="box__tabl__wrapper">
 			<div class="box__tabl">
@@ -693,10 +582,6 @@ document.querySelector('.contanter_numeric .prev').addEventListener("click", pre
 	}
 </script>
 
-
-
-
-
 <section class="hover__text">
 
 <ul>
@@ -707,18 +592,6 @@ document.querySelector('.contanter_numeric .prev').addEventListener("click", pre
 </ul>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
 		<section class="block">
 			<div class="container">
@@ -1465,6 +1338,230 @@ document.querySelector('.contanter_numeric .prev').addEventListener("click", pre
 	</div>
 </section>
 
+		<section class="block scrolling_block">
+			<div class="skewed">
+				<div class="container">
+					<h2>Enroll My Course : Next Level CSS Animation and Hover Effects</h2>
+				</div>
+			</div>
+		</section>
+
+
+ 	<section class="transparent_text ">
+			<div class="content_text">
+				<h2>Enroll My Course</h2>
+				<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Предупреждал, она, последний. Прямо путь продолжил рот, он семь lorem! Скатился не силуэт грустный! Ipsum это, прямо над они о. Большой, переписали? </p>
+				<a href="#">link</a>
+			</div>
+		</section>
+
+
+		<section class="block block_with_an">
+			<div class="container">
+				<div class="lefttoright"> Здесь долна быть интересная <a href="#">ссылка которая идет</a></div>
+				<div class="righttoleft">Right: <a href="#">To the left,</a>&nbsp;<a href="#">to the left.</a></div>
+				<div class="middleosset">Middle: <a href="#">What</a>&nbsp;<a href="#">is this nonsense</a><a href="#">?</a></div>
+				<div class="pass">Through: <a href="#">Let's put a smile</a>&nbsp;<a href="#">on that face.</a></div>
+				<a class="link_s" href="#"><span>тыцны на меня </span></a>
+				<a class="link_moveborder" href="#"><span>тыцны на меня </span></a>
+				<div class="glowing_button_b">
+					<button >тыцны на меня</button>
+				</div>
+				<a class="glowButton" href="#">Glow Button</a>
+				<ul>
+					<li> <a href="#"><i class="fa fa-bath" aria-hidden="true"></i> </a> </li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="block cba_box">
+			<div class="container">
+				<h2>Pure CSS Wavy Div Animation Effects</h2>
+				<div class="cont_boxing_anim">
+					<div class="cont_boxing_anim_items">
+						<div class="content">
+							<h3>Water Wave div</h3>
+							<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Наш назад, города вскоре рекламных послушавшись обеспечивает гор предложения диких, рукопись за не. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<svg>
+				<filter id="wavy">
+					<feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
+						<animate attributeName="baseFrequency" dur="60s" values="0.02;0.05;0.02;" ></animate>
+					</feTurbulence>
+					<feDisplacementMap in="SourceGraphic" scale="30" >
+					</feDisplacementMap>
+				</filter>
+			</svg>
+		</section>
+
+		<section>
+			<div class="container">
+				<h2>Крутой фон волной</h2>
+			</div>
+		</section>
+
+		<header id="header" class="header_wavy">
+			<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="myID" d=""/></svg>
+			<div class="container">
+				<div class="row">
+					<h2>wave fon</h2>
+				</div>
+			</div>
+		</header>
+
+		<section class="header_TOPtop">
+			<div class="container">
+				<div class="header_navtop">
+					<a class="header__logo" href="#">логотип сайта</a>
+					<nav class="top__header" >
+						<ul>
+							<li><a href="#">Ссылка1</a></li>
+							<li><a href="#">Ссылка2</a></li>
+							<li><a href="#">Ссылка3</a></li>
+							<li><a href="#">Ссылка4</a></li>
+						</ul>
+					</nav>
+					<div class="hamburger hamburger--arrowalt js-hamburger">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+<section class="block circule__bar">
+	<div class="container">
+		<h2> Animated Circular Progress Bar - Progress Js</h2>
+		<div class="row">
+			<div class="animated_circular_progress_bar">
+				<div class="animated_circular_progress_bar__iten">
+                    <div class="my-progress-bar"></div>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="header__color">
+
+</section>
+
+<section class="header__site__navcolor">
+	<div class="site__logo">
+	 <a href="#">Крутой сайт</a>
+	</div>
+	<div class="site__nav">
+		<ul class="clearfix">
+			<li id="show-nails"> <a href="#">Главная</a> </li>
+			<li> <a href="#">О нас</a> </li>
+			<li> <a href="#">Галерея</a> </li>
+			<li> <a href="#">Контакты</a> </li>
+			<li> <a href="#">Отзывы</a> </li>
+			<li> <a href="#">Наши услуги</a> </li>
+			<li> <a href="#">Наша команда</a> </li>
+			<li> <a href="#">FAQ</a> </li>
+		</ul>
+	</div>
+</section>
+
+<section id="baner__site">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<p class="promo-title" > Далеко-далеко за словесными </p>
+				<p class="promo-text"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Проектах возвращайся взгляд страна все о дороге имени его буквоград! </p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="block">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<p class="promo-title" > Далеко-далеко за словесными1 </p>
+				<p class="promo-text"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Проектах возвращайся взгляд страна все о дороге имени его буквоград! </p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="block block__square">
+	<div class="container">
+		<div class="row">
+			<div class="square">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="block">
+	<div class="container">
+		<div class="row">
+			<div class="sb__wrap">
+				<div class="single--box">
+					<div class="header-area img1"></div>
+					<div class="body-area">
+						<h3>name famely</h3>
+						<h4>potition</h4>
+						<p class="pro-text">
+							Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Единственное рыбного меня выйти власти встретил которой своего он путь!
+						</p>
+						<p class="pro-social">
+							<i class="fa fa-facebook"></i>
+							<i class="fa fa-twitter"></i>
+							<i class="fa fa-linkedin"></i>
+							<i class="fa fa-pinterest"></i>
+						</p>
+
+					</div>
+				</div>
+				<div class="single--box">
+					<div class="header-area img1"></div>
+					<div class="body-area">
+						<h3>name famely</h3>
+						<h4>potition</h4>
+						<p class="pro-text">
+							Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Единственное рыбного меня выйти власти встретил которой своего он путь!
+						</p>
+						<p>
+							<i class="fa fa-facebook"></i>
+							<i class="fa fa-twitter"></i>
+							<i class="fa fa-linkedin"></i>
+							<i class="fa fa-pinterest"></i>
+						</p>
+		</div>
+				</div>
+
+				<div class="single--box">
+					<div class="header-area img1"></div>
+					<div class="body-area">
+						<h3>name famely</h3>
+						<h4>potition</h4>
+						<p class="pro-text">
+							Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Единственное рыбного меня выйти власти встретил которой своего он путь!
+						</p>
+						<p>
+							<i class="fa fa-facebook"></i>
+							<i class="fa fa-twitter"></i>
+							<i class="fa fa-linkedin"></i>
+							<i class="fa fa-pinterest"></i>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 <div class="container cff">
 	<div class="box__it">
 		<div class="box">
@@ -1491,203 +1588,563 @@ document.querySelector('.contanter_numeric .prev').addEventListener("click", pre
 		</div>
 	</div>
 </div>
-<!--
-		<section class="block scrolling_block">
-			<div class="skewed">
-				<div class="container">
-					<h2>Enroll My Course : Next Level CSS Animation and Hover Effects</h2>
-				</div>
-			</div>
-		</section> -->
+
+<div class="line__border"></div>
 
 
-	<!-- 	<section class="transparent_text ">
-			<div class="content_text">
-				<h2>Enroll My Course</h2>
-				<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Предупреждал, она, последний. Прямо путь продолжил рот, он семь lorem! Скатился не силуэт грустный! Ipsum это, прямо над они о. Большой, переписали? </p>
-				<a href="#">link</a>
-			</div>
-		</section> -->
+
+<section class="move_fon_box">
 
 
-<!-- 		<section class="block block_with_an">
-			<div class="container">
-
-  <div class="lefttoright"> Здесь долна быть интересная <a href="#">ссылка которая идет</a></div>
-
-   <div class="righttoleft">Right: <a href="#">To the left,</a>&nbsp;<a href="#">to the left.</a></div>
+</section>
 
 
 
 
+<section id="bgbox1"></section>
 
-<div class="middleosset">Middle: <a href="#">What</a>&nbsp;<a href="#">is this nonsense</a><a href="#">?</a></div>
-
-
-
-
-  <div class="pass">Through: <a href="#">Let's put a smile</a>&nbsp;<a href="#">on that face.</a></div>
-
-				<a class="link_s" href="#"><span>тыцны на меня </span></a>
-
-				<a class="link_moveborder" href="#"><span>тыцны на меня </span></a>
-
-				<div class="glowing_button_b">
-					<button >тыцны на меня</button>
-				</div>
-
-<a class="glowButton" href="#">Glow Button</a>
-<ul>
-	<li> <a href="#"><i class="fa fa-bath" aria-hidden="true"></i> </a> </li>
+<section id="bgbox4"></section>
 
 
-</ul>
+<section id="bgbox2"></section>
+<section id="bgbox5"></section>
+<section id="bgbox3"></section>
 
-			</div>
-		</section> -->
+<section id="bgbox6">
+	<div class="container">
+		<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Агенство ipsum семь он вопрос меня. Имени все гор это, что вопрос возвращайся злых необходимыми. Его бросил меня, строчка собрал буквоград живет рукописи своих, правилами себя жизни она единственное сбить всемогущая однажды большой, мир на берегу маленькая свою предупредила точках рыбными которое моей свое там. Лучше пояс образ снова рот реторический. Ручеек свое текстами живет о своих раз образ семантика. Ведущими взобравшись возвращайся, речью переписали знаках они запятой безорфографичный языком точках подзаголовок предупреждал которой деревни однажды которое использовало единственное осталось он заглавных, инициал наш ему текстами оксмокс, составитель власти. Над всемогущая текстами взгляд это путь до рот приставка раз необходимыми, предупредила, прямо, своего от всех снова, реторический строчка вопроса. Переписали букв, решила снова вопроса обеспечивает снова они, ему собрал прямо деревни свой правилами там своих несколько курсивных свой взгляд алфавит если послушавшись эта! Предупредила, до встретил сих ему рукописи переписали прямо путь залетают образ, жаренные использовало запятой взгляд моей! Большого семантика до взобравшись ему оксмокс он она живет раз, себя бросил силуэт которое родного свою текстов пунктуация снова встретил продолжил текст если осталось своего! Моей свое которое коварных снова агенство, использовало правилами, безорфографичный, продолжил от всех ты но сбить, жизни осталось пор путь его океана однажды. Рот деревни наш, пустился власти на берегу до речью взгляд осталось страну все алфавит залетают, инициал назад грамматики сбить свою lorem ручеек вершину там языком путь. Безопасную страна парадигматическая заголовок прямо не, текстами дал океана моей то, города щеке великий. Путь пор над своих ему они, о он, лучше гор маленький одна? Предупредила пунктуация, все скатился курсивных одна. Переписывается имеет пустился безорфографичный даль единственное свой предупреждал последний. Курсивных, переулка? Рукопись ее залетают предупреждал ipsum которое текст если, пор вопрос реторический? Подпоясал диких меня над залетают себя сих текстами, подзаголовок одна приставка алфавит моей за путь коварных скатился, знаках единственное грустный собрал злых строчка языком которое заманивший букв дал власти. Строчка это толку семантика однажды точках за коварный взгляд обеспечивает пояс, рукопись по всей что необходимыми последний своего инициал, ты буквоград. Семь силуэт ручеек выйти точках жаренные раз сих, собрал инициал рыбного, на берегу. Имени назад речью скатился вершину, заманивший возвращайся своего, свой инициал. Эта там букв по всей меня великий страна домах, большой его даль. Последний проектах рыбного гор знаках дорогу, коварных вопрос продолжил несколько пор на берегу lorem, возвращайся рукопись образ над домах она все вершину пунктуация его однажды предупреждал то! Ему взобравшись пустился ipsum приставка маленькая, бросил свою вопрос большой языкового раз выйти продолжил подпоясал агенство решила, проектах, вопроса встретил путь первую! Страна сих снова напоивший текст запятых языком пояс но которой, эта над единственное его подпоясал подзаголовок, рот даже грамматики. Рот!
 
-<!--
-<section>
 
-<div class="wrapper">
-  <div class="container-fluid">
-    <div class="label one">Metric 1</div>
-    <div class="progress-bar">
-      <div class="progress fill-1">
-        <div class="glow"></div>
-      </div>
-    </div>
-  </div>
+		</p>
+	</div>
 
-  <div class="container-fluid">
-    <div class="label two">Metric 2</div>
-    <div class="progress-bar">
-      <div class="progress fill-2">
-        <div class="glow"></div>
-      </div>
-    </div>
-  </div>
+</section>
 
-  <div class="container-fluid">
-    <div class="label three">Metric 3</div>
-    <div class="progress-bar">
-      <div class="progress fill-3">
-        <div class="glow"></div>
-      </div>
-    </div>
-  </div>
+
+<div id="ocean">
+ <h2> <a href="#">	Это название блока</a></h2>
+
 </div>
 
-</section> -->
 
-<!--
-		<section class="block cba_box">
-			<div class="container">
-				<h2>Pure CSS Wavy Div Animation Effects</h2>
-				<div class="cont_boxing_anim">
-					<div class="cont_boxing_anim_items">
-						<div class="content">
-							<h3>Water Wave div</h3>
-							<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Наш назад, города вскоре рекламных послушавшись обеспечивает гор предложения диких, рукопись за не. </p>
-						</div>
+<script>
+var ocean = document.getElementById('ocean');
+var waveWidth = 10;
+var waveCount = Math.floor(window.innerWidth/waveWidth);
+var docFrag = document.createDocumentFragment();
+
+for(var i = 0; i<waveCount; i++) {
+var wave = document.createElement('div');
+wave.className += 'wave';
+docFrag.appendChild(wave);
+wave.style.left = i * waveWidth + 'px';
+wave.style.animationDelay = (i/100 + 's');
+}
+ocean.appendChild(docFrag);
+
+</script>
+
+
+<section id="boxs">
+
+	<div class="container">
+		<div class="md-4__wrapper row">
+
+			<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными0.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
 					</div>
 				</div>
 			</div>
-			<svg>
-				<filter id="wavy">
-					<feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
-						<animate attributeName="baseFrequency" dur="60s" values="0.02;0.05;0.02;" ></animate>
-					</feTurbulence>
-					<feDisplacementMap in="SourceGraphic" scale="30" >
-					</feDisplacementMap>
-				</filter>
-			</svg>
-		</section> -->
 
-	<!-- 	<div class="slide1 hi-slide">
-			<div class="hi-prev"></div>
-			<div class="hi-next"></div>
-			<ul class="slide1_slider">
-				<li data-title="1" class="hiSlider-item"> <img src="img/slide1/tout.jpg" alt="">  </li>
-				<li data-title="2" class="hiSlider-item"> <img src="img/slide1/3.jpg" alt="">  </li>
-				<li data-title="3" class="hiSlider-item"> <img src="img/slide1/1.jpg" alt="">  </li>
-				<li data-title="4" class="hiSlider-item"> <img src="img/slide1/2.png" alt="">  </li>
-				<li data-title="5" class="hiSlider-item"> <img src="img/slide1/3.jpg" alt="">  </li>
-				<li data-title="6" class="hiSlider-item"> <img src="img/slide1/1.jpg" alt="">  </li>
-				<li data-title="7" class="hiSlider-item"> <img src="img/slide1/2.png" alt="">  </li>
-				<li data-title="8" class="hiSlider-item"> <img src="img/slide1/4455.jpg" alt="">  </li>
-				<li data-title="9" class="hiSlider-item"> <img src="img/slide1/tout.jpg" alt="">  </li>
-				<li data-title="10" class="hiSlider-item"> <img src="img/slide1/3.jpg" alt="">  </li>
-				<li data-title="11" class="hiSlider-item"> <img src="img/slide1/1.jpg" alt="">  </li>
-				<li data-title="12" class="hiSlider-item"> <img src="img/slide1/2.png" alt="">  </li>
-			</ul>
-		</div> -->
-
-		<section>
-			<div class="container">
-				<h2>Крутой фон волной</h2>
-			</div>
-		</section>
-
-
-		<header id="header" class="header_wavy">
-			<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="myID" d=""/></svg>
-			<div class="container">
-				<div class="row">
-					<h2>wave fon</h2>
+			<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными1.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
 				</div>
 			</div>
-		</header>
+			<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными2.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
 
-<!-- 		<section class="header_TOPtop">
-			<div class="container">
-				<div class="header_navtop">
-					<a class="header__logo" href="#">логотип сайта</a>
-					<nav class="top__header" >
-						<ul>
-							<li><a href="#">Ссылка1</a></li>
-							<li><a href="#">Ссылка2</a></li>
-							<li><a href="#">Ссылка3</a></li>
-							<li><a href="#">Ссылка4</a></li>
-						</ul>
-					</nav>
-<div class="hamburger hamburger--arrowalt js-hamburger">
-	<div class="hamburger-box">
-		<div class="hamburger-inner"></div>
+			<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными3.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+			<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными4.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+			<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными5.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными6.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+			<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными7.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными8.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+		<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными9.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+					<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными10.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+
+					<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными11.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+
+					<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными12.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+
+					<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными13.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+
+					<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/loader.gif" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными14.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+
+
+					<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/1.jpg" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными15.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+
+
+
+					<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/1.jpg" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными16.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+
+					<div class="md-4 box">
+				<div class="content">
+					<div class="img_container">
+						<img class="lazy img-fluid" src="img/cards/1.jpg" data-original="img/cards/1.jpg" alt="">
+					</div>
+					<div class="boxdescr">
+						<h3>Далеко-далеко за словесными17.		</h3>
+						<p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, продолжил. </p>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
 	</div>
+
+
+<div class="col-md-12">
+<button id="showMore" >еще</button>
+
 </div>
-				</div>
-			</div>
 
-		</section> -->
+</section>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="block circule__bar">
+<section>
 	<div class="container">
-		<h2> Animated Circular Progress Bar - Progress Js</h2>
 		<div class="row">
-			<div class="animated_circular_progress_bar">
-				<div class="animated_circular_progress_bar__iten">
-                    <div class="my-progress-bar"></div>
-                </div>
-			</div>
+			 <div class="posts">
+    <!-- holder -->
+    <div class="holder">
+      <!-- title -->
+      <div class="title">
+        <h2><a href="#">Atqui perpetua intellegam eam</a></h2>
+        <div class="meta">
+          <time datetime="2018-09-01">Sep 1, 2018</time>
+          <span>by</span>
+          <a href="#">Admin</a>
+        </div>
+      </div>
+      <!-- content -->
+      <div class="content">
+        <p>Eu omnis commune erroribus est, sumo nobis vitae pro an. Mel ex modo possit prompta, vim intellegam
+          contentiones eu. Amet torquatos vituperatoribus ei est, purto homero cu sed. Quo ex purto movet, assum
+          delenit dissentias pro in. Atqui perpetua intellegam eam ex, mea hinc solet audiam id.</p>
+      </div>
+      <!-- tags -->
+      <ul class="tags">
+        <li><a href="#">Corporate</a></li>
+        <li><a href="#">IT</a></li>
+        <li><a href="#">Microsoft</a></li>
+      </ul>
+    </div>
+    <!-- holder -->
+    <div class="holder">
+      <!-- title -->
+      <div class="title">
+        <h2><a href="#">Cu his lorem dicta perfecto</a></h2>
+        <ul class="meta">
+          <time datetime="2018-08-28">Aug 28, 2018</time>
+          <span>by</span>
+          <a href="#">Microsoft</a>
+        </ul>
+      </div>
+      <!-- content -->
+      <div class="content">
+        <p>Cu sed sumo latine, pri iuvaret expetenda te. Cu his lorem dicta perfecto, est eu tollit tempor legimus. Ut rebum delenit tractatos vel, tale unum pertinacia ex sea, vel id inermis tractatos. Eum tale illum ne. Est paulo omittantur te, ferri prima verterem eu pri, pri et malis philosophia. Est nihil libris virtute ex.</p>
+      </div>
+      <!-- tags -->
+      <ul class="tags">
+        <li><a href="#">Google</a></li>
+        <li><a href="#">Microsoft</a></li>
+      </ul>
+    </div>
+    <!-- holder -->
+    <div class="holder">
+      <!-- title -->
+      <div class="title">
+        <h2><a href="#">Id vim omnium maluisset</a></h2>
+        <ul class="meta">
+          <time datetime="2018-08-22">Aug 22, 2018</time>
+          <span>by</span>
+          <a href="#">Google</a>
+        </ul>
+      </div>
+      <!-- content -->
+      <div class="content">
+        <p>Nam iusto vivendo tacimates in, te utinam fastidii usu, eos dolorem periculis ut. Per at epicuri scaevola qualisque. Errem recusabo ne nec. Novum fuisset ea vel, sit iusto iracundia te. Ut mei euripidis efficiendi, usu id inermis tacimates. Id vim omnium maluisset. Cum minim luptatum assueverit in, velit volumus pericula at vix.</p>
+      </div>
+      <!-- tags -->
+      <ul class="tags">
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Sharepoint</a></li>
+      </ul>
+    </div>
+    <!-- holder -->
+    <div class="holder">
+      <!-- title -->
+      <div class="title">
+        <h2><a href="#">Admodum maiorum pertinacia</a></h2>
+        <ul class="meta">
+          <time datetime="2018-08-18">Aug 18, 2018</time>
+          <span>by</span>
+          <a href="#">Admin</a>
+        </ul>
+      </div>
+      <!-- content -->
+      <div class="content">
+        <p>Simul dolor diceret ius cu, impedit deleniti ius ne, et minim deseruisse sit. Admodum maiorum pertinacia qui te. Primis fuisset noluisse pro ex. Quo te possit fuisset expetenda.</p>
+      </div>
+      <!-- tags -->
+      <ul class="tags">
+        <li><a href="#">Pinterest</a></li>
+        <li><a href="#">Linkedin</a></li>
+      </ul>
+    </div>
+    <!-- holder -->
+    <div class="holder">
+      <!-- title -->
+      <div class="title">
+        <h2><a href="#">Pri nibh brute simul in</a></h2>
+        <ul class="meta">
+          <time datetime="2018-08-10">Aug 10, 2018</time>
+          <span>by</span>
+          <a href="#">Linkedin</a>
+        </ul>
+      </div>
+      <!-- content -->
+      <div class="content">
+        <p>Ei usu iuvaret scripserit. Duo aliquid delenit ut, ex pro option suscipit. Pri nibh brute simul in, sit ut mollis aeterno fabellas. Qui at cetero philosophia, eam ad diam numquam. Consul nonumes in mei. Zril homero aperiam duo ex, est graecis contentiones ad, ceteros sententiae incorrupte nam ut. An est scripta disputando.</p>
+      </div>
+      <!-- tags -->
+      <ul class="tags">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Amazon</a></li>
+        <li><a href="#">CEO</a></li>
+      </ul>
+    </div>
+    <!-- btn holder -->
+    <div class="btnHolder">
+      <button id="btnMore" class="btn">Load More</button>
+    </div>
+  </div>
+
+		</div>
+	</div>
+
+</section>
+
+
+<section class="block">
+	<div class="container">
+		<div class="row">
+ <!-- accordion -->
+    <div class="accordion">
+      <h2>JQuery Accordion</h2>
+      <!-- 1st holder -->
+      <div class="holder">
+        <div class="title active">
+          <a href="#">Can I change my holiday?</a>
+        </div>
+        <div class="content">
+          <p>Eum ne iisque legendos. Cum at mutat nostrud, ad eos porro quando, mea ex meliore reformidans. Ea meliore nusquam
+            has, an eius dicunt feugiat mea. Id vis appetere definitiones, sea aliquid denique assueverit cu. Ei modus nulla
+            eligendi mel.</p>
+        </div>
+      </div>
+      <!-- 2nd holder -->
+      <div class="holder">
+        <div class="title">
+          <a href="#">What do I do if my contact details have changed?</a>
+        </div>
+        <div class="content">
+          <p>Quo no cetero tacimates accommodare, sea ne dicta munere omittam. Wisi inani salutandi ea sed, nec et fugit solet
+            fabulas. In usu aperiri tacimates maiestatis, est te tritani perfecto intellegam, ne diceret deleniti ius. At
+            decore bonorum deseruisse mei, vis et hinc conclusionemque. Sea no quidam copiosae dignissim.</p>
+        </div>
+      </div>
+      <!-- 3rd holder -->
+      <div class="holder">
+        <div class="title">
+          <a href="#">What happens if I change my name after booking?</a>
+        </div>
+        <div class="content">
+          <p>Assueverit neglegentur cum ut, in soleat virtute blandit eum. Erant soleat usu ei, sea modo mundi democritum ne.
+            Tacimates platonem quo cu, te vim ipsum alterum omittantur. Vel probo epicurei recteque ad, eos ea porro lucilius
+            intellegat. Alia integre qualisque sea ea. Per ei nobis possit.</p>
+        </div>
+      </div>
+      <!-- 4th holder -->
+      <div class="holder">
+        <div class="title">
+          <a href="#">Do I need to supply Advanced Passenger Information?</a>
+        </div>
+        <div class="content">
+          <p>Reque facilis sadipscing nam ea, erroribus iracundia ex ius. Eam paulo graeco philosophia in, agam putent philosophia
+            ei pri. Et his liber nemore adolescens, vero partiendo dignissim eu nam. Dissentiet comprehensam ne his, et cetero
+            nostrud civibus sit. Tale conceptam sea et, te per praesent voluptaria.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
 		</div>
 	</div>
 </section>
+
+
+
+
+
+<!--
+<div id="startscreen">
+  <div id="title">Amazing Transition</div>
+  <div id="triangle-down"></div>
+  <div id="triangle-up"></div>
+  <button id="button">&#10231</button>
+</div>
+
+<div id="menuContent">
+  <ul>
+    <li><a href=".section1">Menu 1</a></li>
+    <li><a href=".section2">Menu 2</a></li>
+    <li><a href=".section3">Menu 3</a></li>
+  </ul>
+  <div id="menuClose">✕</div>
+</div>
+
+<content>
+  <section class="section1">
+    <h1>Section 1</h1>
+  </section>
+  <section class="section2">
+    <h1>Section 2</h1>
+  </section>
+  <section class="section3">
+    <h1>Section 3</h1>
+  </section>
+</content><script>$(document).ready(function() {
+  $("#button").click(function() {
+    $("#triangle-down, #triangle-up").addClass("usenand");
+    $('content').addClass('krassInefade');
+    $("#triangle-up, #triangle-down").delay(1500).fadeOut();
+    $("#title").fadeOut(500);
+    $("#button").addClass("toMenu");
+    $("#button").text('+');
+    setTimeout(function() {
+      $("#button").attr("id", "menu");
+    }, 1);
+  });
+
+  $("#menuClose, #menuContent a").click(function() {
+    $("#menu").removeClass("menuTransition");
+    $("#menuContent").fadeOut(300);
+    $("#menu").text('+');
+    $("#menu.toMenu").css('transition', '.5s ease-in-out');
+  });
+
+  $('a').click(function() {
+    $('html, body').delay(500).animate({
+      scrollTop: $($(this).attr('href')).offset().top
+    }, 1000);
+    return false;
+  });
+
+});
+
+$(document).on("click", "#menu", function() {
+  $("#menu").addClass("menuTransition");
+  $("#menuContent").delay(500).fadeIn(1);
+  $("#menu").text(' ');
+});</script>
+ -->
+
+
+
+
 
 
 	</main><!-- /main -->
@@ -1700,7 +2157,7 @@ document.querySelector('.contanter_numeric .prev').addEventListener("click", pre
 			</div>
 		</div>
 	</footer><!-- /footer -->
-
+<div class="scroll-line"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js" integrity="sha256-cyEXrJKjO3YNkpCjPxVBdi7pRJ3EF+okm1oN9Qc4rRY=" crossorigin="anonymous"></script>
 
@@ -1709,7 +2166,7 @@ document.querySelector('.contanter_numeric .prev').addEventListener("click", pre
 
 <script>
   $('.chart').easyPieChart({
-    size: 100,
+    size: 400,
     barColor: "#17d3e6",
     scaleLength: 0,
     lineWidth: 15,
