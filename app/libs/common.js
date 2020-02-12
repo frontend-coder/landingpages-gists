@@ -1,3 +1,8 @@
+!function(t){"use strict";"function"==typeof define&&define.amd?define(["jquery"],t):"object"==typeof exports&&"object"==typeof module?module.exports=t(require("jquery")):t(jQuery)}(function(t,e){"use strict";t.fn.percircle=function(e){var s={animate:!0};e||(e={}),t.extend(e,s);var o=3.6;return this.each(function(){t(this).hasClass("gt50")&&t(this).removeClass("gt50");var s=t(this),n="",d=function(t,e){s.on("mouseover",function(){t.children("span").css("color",e)}),s.on("mouseleave",function(){t.children("span").attr("style","")})};s.hasClass("percircle")||s.addClass("percircle"),"undefined"!=typeof s.attr("data-animate")&&(e.animate="true"==s.attr("data-animate")),e.animate&&s.addClass("animate"),"undefined"!=typeof s.attr("data-progressBarColor")?(e.progressBarColor=s.attr("data-progressBarColor"),n="style='border-color: "+e.progressBarColor+"'",d(t(this),e.progressBarColor)):"undefined"!=typeof e.progressBarColor&&(n="style='border-color: "+e.progressBarColor+"'",d(t(this),e.progressBarColor));var i=s.attr("data-percent")||e.percent||0,c=s.attr("data-perclock")||e.perclock||0,l=s.attr("data-perdown")||e.perdown||0;if(i){i>50&&s.addClass("gt50");var f=s.attr("data-text")||e.text||i+"%";s.html("<span>"+f+"</span>"),t('<div class="slice"><div class="bar" '+n+'></div><div class="fill" '+n+"></div></div>").appendTo(s),i>50&&t(".bar",s).css({"-webkit-transform":"rotate(180deg)","-moz-transform":"rotate(180deg)","-ms-transform":"rotate(180deg)","-o-transform":"rotate(180deg)",transform:"rotate(180deg)"});var m=o*i;setTimeout(function(){t(".bar",s).css({"-webkit-transform":"rotate("+m+"deg)","-moz-transform":"rotate("+m+"deg)","-ms-transform":"rotate("+m+"deg)","-o-transform":"rotate("+m+"deg)",transform:"rotate("+m+"deg)"})},0)}else c?(s.hasClass("perclock")||s.addClass("perclock"),setInterval(function(){var e=new Date,r=a(e.getHours())+":"+a(e.getMinutes())+":"+a(e.getSeconds());s.html("<span>"+r+"</span>"),t('<div class="slice"><div class="bar" '+n+'></div><div class="fill" '+n+"></div></div>").appendTo(s);var o=e.getSeconds();0===o&&s.removeClass("gt50"),o>30&&(s.addClass("gt50"),t(".bar",s).css({"-webkit-transform":"rotate(180deg);scale(1,3)","-moz-transform":"rotate(180deg);scale(1,3)","-ms-transform":"rotate(180deg);scale(1,3)","-o-transform":"rotate(180deg);scale(1,3)",transform:"rotate(180deg);scale(1,3)"}));var d=6*o;t(".bar",s).css({"-webkit-transform":"rotate("+d+"deg)","-moz-transform":"rotate("+d+"deg)","-ms-transform":"rotate("+d+"deg)","-o-transform":"rotate("+d+"deg)",transform:"rotate("+d+"deg)"})},1e3)):l&&r(s,e,n)})};var r=function(e,r,a){function s(){if(c-=1,c>30&&e.addClass("gt50"),c<30&&e.removeClass("gt50"),i(),c<=0)return n(),void e.html("<span>"+l+"</span>")}function o(){m=setInterval(s,1e3)}function n(){clearInterval(m)}function d(){n(),c=r.secs,i(),o()}function i(){e.html("<span>"+c+"</span>"),t('<div class="slice"><div class="bar" '+a+'></div><div class="fill" '+a+"></div></div>").appendTo(e);var r=6*c;t(".bar",e).css({"-webkit-transform":"rotate("+r+"deg)","-moz-transform":"rotate("+r+"deg)","-ms-transform":"rotate("+r+"deg)","-o-transform":"rotate("+r+"deg)",transform:"rotate("+r+"deg)"})}var c=e.attr("data-secs")||r.secs,l=e.attr("data-timeUpText")||r.timeUpText,f=e[0].hasAttribute("data-reset")||r.reset;l.length>8&&(l="the end");var m;f&&e.on("click",d),o()},a=function(t){return t<10?"0"+t:t}});
+
+
+
+
 $(document).ready(function () {
 
 var iconBx = document.querySelectorAll('.iconBx');
@@ -418,6 +423,351 @@ $('#btnMore').on('click', function() {
     $('#btnMore').fadeOut();
   }
 });
+
+
+$('.barra-nivel').each(function() {
+  var valorLargura = $(this).data('nivel');
+  var valorNivel = $(this).html("<span class='valor-nivel'>"+valorLargura+"</span>");
+    $(this).animate({
+        width: valorLargura
+    });
+});
+
+
+
+(function($){
+        new WOW().init();
+    })(jQuery);
+
+
+$(".bar").each(function(){
+  $(this).find(".bar-inner").animate({
+    width: $(this).attr("data-width")
+  },2000)
+});
+
+
+
+$("#skillbar_php").animate({width:'85%'},1500);
+$("#skillbar_asp").animate({width:'55%'},1500);
+$("#skillbar_jsp").animate({width:'75%'},1500);
+
+
+
+
+
+$("#custom").percircle({
+
+text:"custom",
+percent: 27
+});
+$("#clock").percircle({
+ perclock: true
+});
+$("#custom-color").percircle({
+progressBarColor: "#CC3366",
+ percent: 64.5
+
+});
+
+$("#custom-color1").percircle({
+progressBarColor: "#CC3366",
+ percent: 15
+
+});
+
+$("#countdown").percircle({
+ perdown: true,
+ secs: 14,
+ timeUpText: 'finally!'
+});
+
+
+
+// начао циркулярного прогресс бара
+(function ($) {
+    $.fn.loading = function () {
+        var DEFAULTS = {
+            backgroundColor: '#b3cef6',
+            progressColor: '#4b86db',
+            percent: 75,
+            duration: 2000
+        };
+
+        $(this).each(function () {
+            var $target  = $(this);
+
+            var opts = {
+            backgroundColor: $target.data('color') ? $target.data('color').split(',')[0] : DEFAULTS.backgroundColor,
+            progressColor: $target.data('color') ? $target.data('color').split(',')[1] : DEFAULTS.progressColor,
+            percent: $target.data('percent') ? $target.data('percent') : DEFAULTS.percent,
+            duration: $target.data('duration') ? $target.data('duration') : DEFAULTS.duration
+            };
+            // console.log(opts);
+
+            $target.append('<div class="background"></div><div class="rotate"></div><div class="left"></div><div class="right"></div><div class=""><span>' + opts.percent + '%</span></div>');
+
+            $target.find('.background').css('background-color', opts.backgroundColor);
+            $target.find('.left').css('background-color', opts.backgroundColor);
+            $target.find('.rotate').css('background-color', opts.progressColor);
+            $target.find('.right').css('background-color', opts.progressColor);
+
+            var $rotate = $target.find('.rotate');
+            setTimeout(function () {
+                $rotate.css({
+                    'transition': 'transform ' + opts.duration + 'ms linear',
+                    'transform': 'rotate(' + opts.percent * 3.6 + 'deg)'
+                });
+            },1);
+
+            if (opts.percent > 50) {
+                var animationRight = 'toggle ' + (opts.duration / opts.percent * 50) + 'ms step-end';
+                var animationLeft = 'toggle ' + (opts.duration / opts.percent * 50) + 'ms step-start';
+                $target.find('.right').css({
+                    animation: animationRight,
+                    opacity: 1
+                });
+                $target.find('.left').css({
+                    animation: animationLeft,
+                    opacity: 0
+                });
+            }
+        });
+    }
+})(jQuery);
+
+
+
+
+
+
+$(".progress-bar_nwe").loading();
+
+//Circular Pie Chart & Progress Bar Plugin with
+
+
+
+    (function() {
+            var canvas = document.getElementById('canvas'),
+                circlesCreated = false;
+
+            function onScroll() {
+                if (!circlesCreated && elementInViewport(canvas)) {
+                    circlesCreated = true;
+                    createCircles();
+                }
+            }
+
+            function elementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+
+            return (
+              rect.top  >= 0 &&
+              rect.left >= 0 &&
+              rect.top  <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+          }
+
+            function createCircles() {
+                var colors = [
+                        ['#D3B6C6', '#4B253A'], ['#FCE6A4', '#EFB917'], ['#BEE3F7', '#45AEEA']
+                    ],
+                    circles = [];
+
+                for (var i = 1; i <= colors.length; i++) {
+                    var child = document.getElementById('circles-' + i),
+                        percentage = 31.42 + (i * 9.84),
+
+                        circle = Circles.create({
+                            id:         child.id,
+                            value:      percentage,
+                            radius:     70,
+                            width:      10,
+                            colors:     colors[i - 1]
+                        });
+
+                    circles.push(circle);
+                }
+            }
+
+          window.onscroll = onScroll;
+
+        })();
+
+
+
+// $(window).scroll(function() {
+
+//     var target = $(this).scrollTop();
+
+//     if(target == 0) {
+
+//         // Действие, если страница в самом верху
+
+//     } else {
+
+//         // Действие, если страница прокручена вниз
+
+//     }
+
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Circlle(el){
+  $(el).circleProgress({fill: {color: '#ff5c5c'}})
+    .on('circle-animation-progress', function(event, progress, stepValue){
+        $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+'%');
+        });
+};
+Circlle('.round');
+
+
+
+
+
+
+var myCircle = Circles.create({
+  id:                  'circles-4',
+  radius:              80,
+  value:               43,
+  maxValue:            100,
+  width:               10,
+  text:                function(value){return value + '%';},
+  colors:              ['#D3B6C6', '#4B253A'],
+  duration:            400,
+  wrpClass:            'circles-wrp',
+  textClass:           'circles-text',
+  valueStrokeClass:    'circles-valueStroke',
+  maxValueStrokeClass: 'circles-maxValueStroke',
+  styleWrapper:        true,
+  styleText:           true,
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var myCircle = Circles.create({
+  id:                  'circles-5',
+  radius:              80,
+  value:               89,
+  maxValue:            100,
+  width:               10,
+  text:                function(value){return value + '%';},
+  colors:              ['#D3B6C6', '#4B253A'],
+  duration:            400,
+  wrpClass:            'circles-wrp',
+  textClass:           'circles-text ',
+  valueStrokeClass:    'circles-valueStroke ',
+  maxValueStrokeClass: 'circles-maxValueStroke',
+  styleWrapper:        true,
+  styleText:           true,
+
+});
+
+
+var myCircle = Circles.create({
+  id:                  'circles2',
+  radius:              80,
+  value:               65,
+  maxValue:            100,
+  width:               10,
+  text:                function(value){return value + '%';},
+  colors:              ['#D3B6C6', '#4B253A'],
+  duration:            400,
+  wrpClass:            'circles-wrp',
+  textClass:           'circles-text',
+  valueStrokeClass:    'circles-valueStroke',
+  maxValueStrokeClass: 'circles-maxValueStroke',
+  styleWrapper:        true,
+  styleText:           true
+});
+
+
+
+//Circular Pie Chart & Progress Bar Plugin with
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// конец
+
+
+
+
+
+
+
+
+
+  // var count = 0;
+  //         $('.inner').click(function(){
+  //           setInterval(function(){
+  //             if(count == 100){
+  //               $('.outer').remove('active');
+  //               $('.outer').addClass('active2');
+  //               clearInterval();
+  //             }else{
+  //               count = count + 1;
+  //               $('span').text(count + '%');
+  //               $('.outer').addClass('active');
+  //             }
+  //           }, 200);
+  //         });
+  //       });
+
+
+
+
+
 
 /*
 accordion
