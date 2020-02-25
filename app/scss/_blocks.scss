@@ -1,0 +1,104 @@
+#form__validate {
+	width:400px;
+	border:1px solid red;
+}
+#form__validate .inputBox_name,
+#form__validate .inputBox {
+	position: relative;
+	display: inline-block;
+}
+#form__validate #name,
+#email {
+width: 300px;
+background-color: lighten(#000, 10%);
+outline: none;
+border:none;
+padding: 10px;
+border-radius: 6px;
+color:#fff;
+position: relative;
+
+
+}
+#text {
+	display: block;
+	color:#000;
+	font-weight: 500;
+	padding:5px;
+}
+
+#form__validate.invalid .inputBox_name:before,
+#form__validate #email.invalid:before {
+content:"";
+position: absolute;
+right:12px;
+top:7px;
+width:24px;
+height:24px;
+background: url(/img/valid/invalid.png);
+background-size: cover;
+z-index: 1000;
+}
+#form__validate.valid .inputBox_name:before,
+#form__validate #email.valid:before {
+content:"";
+position: absolute;
+right:12px;
+top:7px;
+width:24px;
+height:24px;
+background: url(/img/valid/valid.png);
+background-size: cover;
+z-index: 1000;
+}
+
+
+
+
+.cookie-block {
+	position: fixed;
+	width:100%;
+	height: 50px;
+	bottom:0;
+	left:0;
+    border: 3px solid red;
+    background-color: #fff;
+    opacity:0.9;
+ 	display: none;
+  	font-size: .9rem;
+}
+.cookie-block .ok {
+	background-color: red;
+	border:none;
+	color:#fff;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+}
+
+
+
+.ripple__box_fon {
+background: url(../img/slider/8a9490f60261f9fec3a01e532af65b1d.jpg) 50% 0 no-repeat;
+background-size: cover;
+min-height: 700px;
+}
+
+.rbf {
+	display: flex;
+	min-height: 700px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ripple__box_fon:before {
+	content :'';
+display: inline-block;
+vertical-align: middle;
+height:100%;
+}
+
+
+
+

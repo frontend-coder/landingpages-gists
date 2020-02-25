@@ -117,8 +117,6 @@
 							<button class="closeB">✕</button>
 						</div>
 					</div>
-
-
 </div>
 
 <!-- <div class="int_iten">
@@ -161,10 +159,6 @@
 
 <!--
 </div> -->
-
-
-
-
 <!--
 <div class="hamburger_f">
 <div class="hamburger hamburger--3dx">
@@ -184,8 +178,6 @@
 		<li><a href="#">resume</a></li>
 		<li><a href="#">contact</a></li>
 	</ul>
-
-
 </nav>
 </div> -->
 	<!-- Custom HTML -->
@@ -216,10 +208,7 @@
 <div class="header_cont">
 
 <h1>Заглавие</h1>
-
-
 </div>
-
 		</section>
  -->
 
@@ -339,6 +328,111 @@ headerBg.style.backgroundPositionY = +window.pageYOffset/2+'px'
 </script> -->
 
 	<main>
+
+<section class="block">
+	<div class="container">
+		<div class="row">
+
+<form action="" id="form__validate">
+
+	<div id="inputBox_name" class="inputBox_name">
+	<input id="name" type="text" name="" placeholder="Enter your name" >
+	<span id="texting"></span>
+</div>
+
+
+<div class="inputBox">
+	<input id="email" type="text" name="" placeholder="Enter email adress" >
+	<span id="text"></span>
+</div>
+
+
+
+
+</form>
+
+<script>
+	function validatename() {
+
+	}
+
+function validate() {
+	let formValidate = document.getElementById('email');
+	let email = document.getElementById('email').value;
+	let text = document.getElementById('text');
+	let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+if (email.match(pattern)) {
+formValidate.classList.add("valid");
+formValidate.classList.remove("invalid");
+text.innerHTML = "Ваш email-адресс валиден";
+text.style.color = "#00ff00";
+} else {
+formValidate.classList.remove("valid");
+formValidate.classList.add("invalid");
+text.innerHTML = "Введите валидный email-адресс";
+text.style.color = "#BA2F11";
+}
+if (email == "") {
+formValidate.classList.remove("valid");
+formValidate.classList.remove("invalid");
+text.innerHTML = "";
+text.style.color = "#00ff00";
+}
+}
+
+	document.getElementById('email').onkeydown=validate;
+</script>
+
+
+
+		</div>
+	</div>
+</section>
+
+
+		<section class="block">
+			<div class="container">
+				<div class="row">
+					<div id="mySliding" class="img-area hi-slide">
+						<div class="hi-prev"></div>
+						<div class="hi-next"></div>
+						<ul class="hiSlider">
+							<li  data-title="11111" class="hiSlider-item"> <img src="img/hi/1.jpg" alt=""></li>
+							<li data-title="11111" class="hiSlider-item" > <img src="img/hi/2.jpg" alt=""></li>
+							<li data-title="11111" class="hiSlider-item" > <img src="img/hi/2.jpg" alt=""></li>
+							<li data-title="11111" class="hiSlider-item"> <img src="img/hi/3.jpg" alt=""></li>
+							<li  data-title="11111" class="hiSlider-item"> <img src="img/hi/4.jpg" alt=""></li>
+							<li  data-title="11111" class="hiSlider-item"> <img src="img/hi/5.jpg" alt=""></li>
+							<li  data-title="11111" class="hiSlider-item"> <img src="img/hi/6.jpg" alt=""></li>
+							<li  data-title="11111" class="hiSlider-item"> <img src="img/hi/7.jpg" alt=""></li>
+							<li  data-title="11111" class="hiSlider-item"> <img src="img/hi/8.jpg" alt=""></li>
+							<li data-title="11111" class="hiSlider-item"> <img src="img/hi/9.jpg" alt=""></li>
+							<li  data-title="11111" class="hiSlider-item"> <img src="img/hi/10.jpg" alt=""></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<div id="slide__slide" class="slide hi-slide">
+			<div class="hi-prev "></div>
+			<div class="hi-next "></div>
+			<ul>
+				<li  data-title="11111" class="hiSlider-item"><img src="img/hi/1.jpg" alt="轮播图片1" /></li>
+				<li data-title="11111" class="hiSlider-item"><img src="img/hi/2.jpg" alt="轮播图片2" /></li>
+				<li data-title="11111" class="hiSlider-item"><img src="img/hi/3.jpg" alt="轮播图片3" /></li>
+				<li data-title="11111" class="hiSlider-item"><img src="img/hi/4.jpg" alt="轮播图片4" /></li>
+				<li data-title="11111" class="hiSlider-item"><img src="img/hi/5.jpg" alt="轮播图片5" /></li>
+				<li data-title="11111" class="hiSlider-item"><img src="img/hi/6.jpg" alt="轮播图片6" /></li>
+				<li data-title="11111" class="hiSlider-item"><img src="img/hi/7.jpg" alt="轮播图片7" /></li>
+			</ul>
+		</div>
+
+
+
+
 		<header class="cool_header">
 			<div class="content__header">
 				<div>
@@ -2413,6 +2507,18 @@ $(document).on("click", "#menu", function() {
   $("#menu").text(' ');
 });</script>
  -->
+ <section class="ripple__box_fon">
+ 	<div class="container">
+ 		<div class="row rbf">
+ 			<div class="ripple_content">
+ 				<h1>Крутое УТП </h1>
+ 				<h3> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика, за. </h3>
+ 			</div>
+ 		</div>
+ 	</div>
+ </section>
+
+
 	</main><!-- /main -->
 
 
@@ -2424,6 +2530,14 @@ $(document).on("click", "#menu", function() {
 		</div>
 	</footer><!-- /footer -->
 <div class="scroll-line"></div>
+
+  <div class="cookie-block">
+        Пока куки есть - меня не будет видно.
+        <button class="ok">ok</button>
+    </div>
+
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js" integrity="sha256-cyEXrJKjO3YNkpCjPxVBdi7pRJ3EF+okm1oN9Qc4rRY=" crossorigin="anonymous"></script>
 
@@ -2482,6 +2596,32 @@ setTimeout(function(){
 
 
 </script>
+
+
+	<script>
+const cookieEl = document.querySelector('.cookie-block');
+const okEl = document.querySelector('.ok');
+
+okEl.addEventListener('click', () => {
+    cookieEl.style.display = 'none';
+});
+let cookies = () => {
+    if (!Cookies.get('hide-cookie')) {
+        setTimeout(() => {
+            cookieEl.style.display = 'block';
+        }, 1000);
+    }
+    Cookies.set('hide-cookie', 'true', {
+        expires: 30
+    });
+}
+cookies();
+</script>
+
+
+
+
+
 
 
 </body>

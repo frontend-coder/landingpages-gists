@@ -51,7 +51,7 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', done => {
 	var jsFiles = [
-	'app/libs/plagins/jquery341.js',
+	'app/libs/plagins/jquery.1.9.1.js',
 'app/libs/plagins/jquery.hiSlider.js-master/js/jquery.hiSlider.min.js',
 'app/libs/plagins/page-scroll-to-id-master/js/minified/jquery.malihu.PageScroll2id.min.js',
 'app/libs/plagins/magnific-popup/jquery.magnific-popup.min.js',
@@ -61,6 +61,15 @@ gulp.task('scripts', done => {
 
 'app/libs/plagins/circles.js',
 'app/libs/plagins/circle-progress.min.js',
+
+'app/libs/plagins/js-cookie.js',
+
+'app/libs/plagins/jquery.ripples-master/dist/jquery.ripples-min.js',
+
+//'app/libs/plagins/jquery.hiSlider.js-master/js/jquery.hiSlider.min.js',
+
+//'app/libs/plagins/jquery.hiSlide-master/js/jquery.hislide.js',
+
 
 
 

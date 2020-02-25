@@ -541,12 +541,44 @@ $("#countdown").percircle({
 
 
 
+// email validete
+
+
+
+
+
+
+
+
+
+
+    // $('#mySliding').hiSlide({
+    //      item: '.hiSlider-item',
+    //      isFlexible: true,
+    //      mode: 'fade',
+    //      isSupportTouch: false,
+    //     // isShowTitle: false,
+    //     // isShowPage: false,
+    //     // titleAttr: function(curIdx){
+    //     //     return $('img', this).attr('alt');
+    //     // }
+    // });
+
+    // $('#slide__slide').hiSlide({
+    //      item: '.hiSlider-item',
+    //      isFlexible: true,
+    //      mode: 'fade',
+    //      isSupportTouch: false,
+    //     // isShowTitle: false,
+    //     // isShowPage: false,
+    //     // titleAttr: function(curIdx){
+    //     //     return $('img', this).attr('alt');
+    //     // }
+    // });
+
 $(".progress-bar_nwe").loading();
 
 //Circular Pie Chart & Progress Bar Plugin with
-
-
-
     (function() {
             var canvas = document.getElementById('canvas'),
                 circlesCreated = false;
@@ -616,10 +648,11 @@ $(".progress-bar_nwe").loading();
 
 
 
-
-
-
-
+        $('.ripple__box_fon').ripples({
+            resolution: 512,
+            dropRadius: 20, //px
+            perturbance: 0.04,
+        });
 
 
 
@@ -631,11 +664,6 @@ function Circlle(el){
         });
 };
 Circlle('.round');
-
-
-
-
-
 
 var myCircle = Circles.create({
   id:                  'circles-4',
@@ -654,19 +682,6 @@ var myCircle = Circles.create({
   styleText:           true,
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 var myCircle = Circles.create({
   id:                  'circles-5',
@@ -707,36 +722,6 @@ var myCircle = Circles.create({
 
 
 //Circular Pie Chart & Progress Bar Plugin with
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // конец
 
