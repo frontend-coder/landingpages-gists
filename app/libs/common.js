@@ -5,23 +5,60 @@
 
 $(document).ready(function () {
 
-var iconBx = document.querySelectorAll('.iconBx');
-var contentBx = document.querySelectorAll('.contentBx');
 
-for( let i=0; i<iconBx.length; i++) {
-iconBx[i].addEventListener('mouseover', function(){
-	for( let i=0; i<contentBx.length; i++) {
-contentBx[i].className='contentBx';
+    $('.portfolio_grid').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      tLoading: 'Загружается #%curr%...',
+      removalDelay: 300,
+      closeOnContentClick: !0,
+      mainClass: 'mfp-img-mobile',
+      fixedContentPos : false,
+      fixedBgPos      : false,
+      tClose: 'Закрыть (Esc)',
+      gallery: {
+        tPrev: 'Предыдущий (левая клавиша на клавиатуре)',
+        tNext: 'Следующий (правая клавиша на клавиатуре)',
+        tCounter: '%curr% из %total%',
+        enabled: true,
+        navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+  },
+  image: {
+      tError: '<a href="%url%">Изображение не загружено.',
+      titleSrc: function(item) {
+        return item.el.attr('title') + '<small>Васильченко Игорь</small>';
+    },
+        zoom: {
+            enabled: !0,
+            duration: 300,
+            easing: 'ease-in-out',
+            opener: function(e) {
+                return e.is("img") ? e : e.find("img")
+            }
+        }
 }
-document.getElementById(this.dataset.id).className = 'contentBx active';
+});
 
-for( let i=0; i<iconBx.length; i++) {
-iconBx[i].className = 'iconBx';
-}
-this.className='iconBx active';
 
-})
-}
+
+    var iconBx = document.querySelectorAll('.iconBx');
+    var contentBx = document.querySelectorAll('.contentBx');
+
+    for( let i=0; i<iconBx.length; i++) {
+        iconBx[i].addEventListener('mouseover', function(){
+           for( let i=0; i<contentBx.length; i++) {
+            contentBx[i].className='contentBx';
+        }
+        document.getElementById(this.dataset.id).className = 'contentBx active';
+
+        for( let i=0; i<iconBx.length; i++) {
+            iconBx[i].className = 'iconBx';
+        }
+        this.className='iconBx active';
+
+    })
+    }
 
 
 // код для первого блока FAQ
@@ -34,10 +71,10 @@ $('.spoler_title1').click(function(){
 $('.spoler_title2').click(function(event){
 
 	if ($('.spoler_block_one').hasClass('one')) {
-$('.spoler_title2').not($(this)).removeClass('one');
-$('.spoler_text').not($(this).next()).slideUp(300);
-	};
-	$(this).toggleClass('active').next().slideToggle(300);
+        $('.spoler_title2').not($(this)).removeClass('one');
+        $('.spoler_text').not($(this).next()).slideUp(300);
+    };
+    $(this).toggleClass('active').next().slideToggle(300);
 
 });
 
@@ -45,10 +82,10 @@ $('.spoler_text').not($(this).next()).slideUp(300);
 $('.spoler_title3').click(function(event){
 
 	if ($('.spoler_block_two').hasClass('two')) {
-$('.spoler_title3').not($(this)).removeClass('two');
-$('.spoler_text').not($(this).next()).slideUp(300);
-	};
-	$(this).toggleClass('active').next().slideToggle(300);
+        $('.spoler_title3').not($(this)).removeClass('two');
+        $('.spoler_text').not($(this).next()).slideUp(300);
+    };
+    $(this).toggleClass('active').next().slideToggle(300);
 
 });
 
@@ -61,12 +98,12 @@ $.each($('.checkbox'), function(index, val) {
 
 $(document).on('click', '.checkbox', function(event) {
 	if($(this).hasClass('active')) {
-$(this).find('input').prop('checked', false).removeAttr('checked');
-	} else {
-$(this).find('input').prop('checked', true).attr('checked', 'checked');
-	}
-	$(this).toggleClass('active');
-	return false;
+        $(this).find('input').prop('checked', false).removeAttr('checked');
+    } else {
+        $(this).find('input').prop('checked', true).attr('checked', 'checked');
+    }
+    $(this).toggleClass('active');
+    return false;
 });
 
 $.each($('.radiobuttons__item'), function(index, val) {
@@ -76,11 +113,11 @@ $.each($('.radiobuttons__item'), function(index, val) {
 });
 
 $(document).on('click', '.radiobuttons__item', function(event) {
-$(this).parents('.radiobuttons').find('.radiobuttons__item').removeClass('active');
-$(this).parents('.radiobuttons').find('.radiobuttons__item input').prop('checked', false);
-$(this).toggleClass('active');
-$(this).find('input').prop('checked', true);
-return false;
+    $(this).parents('.radiobuttons').find('.radiobuttons__item').removeClass('active');
+    $(this).parents('.radiobuttons').find('.radiobuttons__item input').prop('checked', false);
+    $(this).toggleClass('active');
+    $(this).find('input').prop('checked', true);
+    return false;
 });
 
 
@@ -88,22 +125,22 @@ const contenting = document.querySelector('.contenting');
 window.onmousemove = function(e) {
 	var x = - e.clientX/5;
 	var y = - e.clientY/5;
-contenting.style.backgroundPositionX = x + 'px' ;
-contenting.style.backgroundPositionY = y + 'px' ;
+    contenting.style.backgroundPositionX = x + 'px' ;
+    contenting.style.backgroundPositionY = y + 'px' ;
 }
 
 const headerParallax = document.getElementById('header_parallax');
 window.addEventListener('scroll', function() {
-let offset = window.pageYOffset;
-headerParallax.style.backgroundPositionY = offset * 0.7 + 'px ';
+    let offset = window.pageYOffset;
+    headerParallax.style.backgroundPositionY = offset * 0.7 + 'px ';
 })
 
 
 
 
 $('.header__burger').click(function(e){
-$('.header__burger, .header__menu').toggleClass('active');
-$('body').toggleClass('lock');
+    $('.header__burger, .header__menu').toggleClass('active');
+    $('body').toggleClass('lock');
 });
 
 $('#toggle__menu').on('click', function() {
@@ -116,15 +153,15 @@ $('#toggle__menu').on('click', function() {
 
 var hamburgerNew = document.querySelector(".hamburgerNew");
 hamburgerNew.addEventListener("click", function() {
- this.classList.toggle("is-active");
+   this.classList.toggle("is-active");
 });
 
 
 
 
 $('#toggleIcon').click(function(e){
-$('#menu-overlay').toggleClass('active');
-$('body').toggleClass('locked');
+    $('#menu-overlay').toggleClass('active');
+    $('body').toggleClass('locked');
 });
 
 
@@ -277,7 +314,7 @@ $(window).scroll(function(){
 
     /* =========================================================================
         PRIVATE FUNCTIONS
-    ========================================================================= */
+        ========================================================================= */
 
     // return string without 'px' or '%'
     function removeUnit(apples) {
@@ -351,9 +388,9 @@ $(window).scroll(function(){
             starting angle in radians
             ending angle in radians
             clockwise (false, default) or counter-clockwise (true)
-        */
-        ctx.arc(xcoord, ycoord, radius, starting_radian, ending_radian, global_settings.counter_clockwise);
-        ctx.stroke();
+            */
+            ctx.arc(xcoord, ycoord, radius, starting_radian, ending_radian, global_settings.counter_clockwise);
+            ctx.stroke();
 
         // Add text
         if(global_settings.percentage) {
@@ -365,9 +402,9 @@ $(window).scroll(function(){
 
 }( jQuery ));
 
-    $(".my-progress-bar").circularProgress({
-        line_width: 6,
-        color: "#ccc",
+$(".my-progress-bar").circularProgress({
+    line_width: 6,
+    color: "#ccc",
         starting_position: 0, // 12.00 o' clock position, 25 stands for 3.00 o'clock (clock-wise)
         percent: 0, // percent starts from
         percentage: true,
@@ -389,9 +426,9 @@ $(window).scroll(function(){
 
 
 $('.move_fon_box').mousemove(function(e){
-var moveX =(e.pageX * -1 / 15);
-var moveY =(e.pageY * -1 / 15);
-$(this).css('background-position', moveX + 'px ' + moveY + 'px');
+    var moveX =(e.pageX * -1 / 15);
+    var moveY =(e.pageY * -1 / 15);
+    $(this).css('background-position', moveX + 'px ' + moveY + 'px');
 });
 
 $(window).scroll(function() {
@@ -399,17 +436,17 @@ $(window).scroll(function() {
     var documentHeight = $(document).height();
     var windowHeight = $(window).height();
 
-var scroll = (windowTop  / (documentHeight - windowHeight)) * 100;
-$('.scroll-line').css("width",(scroll + '%'));
+    var scroll = (windowTop  / (documentHeight - windowHeight)) * 100;
+    $('.scroll-line').css("width",(scroll + '%'));
 })
 
 
 $('#showMore').on('click', function() {
-$('#boxs .box:hidden').slice(0,3).slideDown();
-if($('#boxs .box:hidden').length == 0) {
-    $('#boxs #showMore').fadeOut('slow');
+    $('#boxs .box:hidden').slice(0,3).slideDown();
+    if($('#boxs .box:hidden').length == 0) {
+        $('#boxs #showMore').fadeOut('slow');
 
-}
+    }
 });
 
 
@@ -421,29 +458,29 @@ $('#btnMore').on('click', function() {
   $('.posts .holder:hidden').slice(0,1).slideDown();
   if($('.posts .holder:hidden').length === 0) {
     $('#btnMore').fadeOut();
-  }
+}
 });
 
 
 $('.barra-nivel').each(function() {
   var valorLargura = $(this).data('nivel');
   var valorNivel = $(this).html("<span class='valor-nivel'>"+valorLargura+"</span>");
-    $(this).animate({
-        width: valorLargura
-    });
+  $(this).animate({
+    width: valorLargura
+});
 });
 
 
 
 (function($){
-        new WOW().init();
-    })(jQuery);
+    new WOW().init();
+})(jQuery);
 
 
 $(".bar").each(function(){
   $(this).find(".bar-inner").animate({
     width: $(this).attr("data-width")
-  },2000)
+},2000)
 });
 
 
@@ -458,28 +495,28 @@ $("#skillbar_jsp").animate({width:'75%'},1500);
 
 $("#custom").percircle({
 
-text:"custom",
-percent: 27
+    text:"custom",
+    percent: 27
 });
 $("#clock").percircle({
- perclock: true
+   perclock: true
 });
 $("#custom-color").percircle({
-progressBarColor: "#CC3366",
- percent: 64.5
+    progressBarColor: "#CC3366",
+    percent: 64.5
 
 });
 
 $("#custom-color1").percircle({
-progressBarColor: "#CC3366",
- percent: 15
+    progressBarColor: "#CC3366",
+    percent: 15
 
 });
 
 $("#countdown").percircle({
- perdown: true,
- secs: 14,
- timeUpText: 'finally!'
+   perdown: true,
+   secs: 14,
+   timeUpText: 'finally!'
 });
 
 
@@ -498,10 +535,10 @@ $("#countdown").percircle({
             var $target  = $(this);
 
             var opts = {
-            backgroundColor: $target.data('color') ? $target.data('color').split(',')[0] : DEFAULTS.backgroundColor,
-            progressColor: $target.data('color') ? $target.data('color').split(',')[1] : DEFAULTS.progressColor,
-            percent: $target.data('percent') ? $target.data('percent') : DEFAULTS.percent,
-            duration: $target.data('duration') ? $target.data('duration') : DEFAULTS.duration
+                backgroundColor: $target.data('color') ? $target.data('color').split(',')[0] : DEFAULTS.backgroundColor,
+                progressColor: $target.data('color') ? $target.data('color').split(',')[1] : DEFAULTS.progressColor,
+                percent: $target.data('percent') ? $target.data('percent') : DEFAULTS.percent,
+                duration: $target.data('duration') ? $target.data('duration') : DEFAULTS.duration
             };
             // console.log(opts);
 
@@ -576,55 +613,55 @@ $("#countdown").percircle({
     //     // }
     // });
 
-$(".progress-bar_nwe").loading();
+    $(".progress-bar_nwe").loading();
 
 //Circular Pie Chart & Progress Bar Plugin with
-    (function() {
-            var canvas = document.getElementById('canvas'),
-                circlesCreated = false;
+(function() {
+    var canvas = document.getElementById('canvas'),
+    circlesCreated = false;
 
-            function onScroll() {
-                if (!circlesCreated && elementInViewport(canvas)) {
-                    circlesCreated = true;
-                    createCircles();
-                }
-            }
+    function onScroll() {
+        if (!circlesCreated && elementInViewport(canvas)) {
+            circlesCreated = true;
+            createCircles();
+        }
+    }
 
-            function elementInViewport(el) {
-            var rect = el.getBoundingClientRect();
+    function elementInViewport(el) {
+        var rect = el.getBoundingClientRect();
 
-            return (
-              rect.top  >= 0 &&
-              rect.left >= 0 &&
-              rect.top  <= (window.innerHeight || document.documentElement.clientHeight)
-            );
-          }
+        return (
+          rect.top  >= 0 &&
+          rect.left >= 0 &&
+          rect.top  <= (window.innerHeight || document.documentElement.clientHeight)
+          );
+    }
 
-            function createCircles() {
-                var colors = [
-                        ['#D3B6C6', '#4B253A'], ['#FCE6A4', '#EFB917'], ['#BEE3F7', '#45AEEA']
-                    ],
-                    circles = [];
+    function createCircles() {
+        var colors = [
+        ['#D3B6C6', '#4B253A'], ['#FCE6A4', '#EFB917'], ['#BEE3F7', '#45AEEA']
+        ],
+        circles = [];
 
-                for (var i = 1; i <= colors.length; i++) {
-                    var child = document.getElementById('circles-' + i),
-                        percentage = 31.42 + (i * 9.84),
+        for (var i = 1; i <= colors.length; i++) {
+            var child = document.getElementById('circles-' + i),
+            percentage = 31.42 + (i * 9.84),
 
-                        circle = Circles.create({
-                            id:         child.id,
-                            value:      percentage,
-                            radius:     70,
-                            width:      10,
-                            colors:     colors[i - 1]
-                        });
+            circle = Circles.create({
+                id:         child.id,
+                value:      percentage,
+                radius:     70,
+                width:      10,
+                colors:     colors[i - 1]
+            });
 
-                    circles.push(circle);
-                }
-            }
+            circles.push(circle);
+        }
+    }
 
-          window.onscroll = onScroll;
+    window.onscroll = onScroll;
 
-        })();
+})();
 
 
 
@@ -648,8 +685,8 @@ $(".progress-bar_nwe").loading();
 
 
 
-        $('.ripple__box_fon').ripples({
-            resolution: 512,
+$('.ripple__box_fon').ripples({
+    resolution: 512,
             dropRadius: 20, //px
             perturbance: 0.04,
         });
@@ -659,9 +696,9 @@ $(".progress-bar_nwe").loading();
 
 function Circlle(el){
   $(el).circleProgress({fill: {color: '#ff5c5c'}})
-    .on('circle-animation-progress', function(event, progress, stepValue){
-        $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+'%');
-        });
+  .on('circle-animation-progress', function(event, progress, stepValue){
+    $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+'%');
+});
 };
 Circlle('.round');
 
@@ -808,7 +845,7 @@ $('.title').click(function(event) {
 /*    var hamburgers = document.querySelector(".hamburger");
          // hamburgers.addEventListener("click", function() {
          //  this.classList.toggle("is-active");
-        });*/
+     });*/
 
 // 	$('.hamburger_f').click(function () {
 // 	$('.hamburger_f').toggleClass("is-active");

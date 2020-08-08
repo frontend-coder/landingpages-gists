@@ -39,7 +39,10 @@ gulp.task('styles', () => {
 	}))
 	.pipe(sourcemaps.init())
 	.pipe(sass({ outputStyle: 'expanded' }))
-	.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade:true}))
+	.pipe(autoprefixer({
+grid:true,
+cascade:true,
+overrideBrowserlist:["last 5 versions"]}))
 	.pipe(concat('libs.css'))
 	.pipe(rename('libs.min.css'))
 //.pipe(cleancss( {level: { 2: { specialComments: 0 } } })) // Opt., comment out when debugging
